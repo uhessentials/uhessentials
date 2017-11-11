@@ -1,10 +1,23 @@
 <template name="User_Header">
-  <div class="ui top fixed borderless inverted teal menu">
+  <div class="ui top fixed borderless inverted green menu">
     <div class="ui container">
-      <div class="item"><h1>BowFolios</h1></div>
-      <a class="{{isActiveRoute "Profile_Page"}} item" href="{{pathFor "Profile_Page" username=routeUserName}}">Profile</a>
-      <a class="{{isActiveRoute "Filter_Page"}} item" href="{{pathFor "Filter_Page" username=routeUserName}}">Filter</a>
-      <div class="right aligned item">{{> Cas_Login }}</div>
+      <div class="item"><h1>UH Essentials</h1></div>
+      <a class="{{isActiveRoute " Home_Page"}} item" href="{{pathFor "Home_Page" username=routeUserName}}">Home</a>
+      <a class="{{isActiveRoute " Profile_Page"}} item" href="{{pathFor "Profile_Page"
+      username=routeUserName}}">Profile</a>
+      <a class="{{isActiveRoute " Filter_Page"}} item" href="{{pathFor "Filter_Page"
+      username=routeUserName}}">Filter</a>
+
+      <div class="right aligned item">
+        <div class="item">
+          <p>Hello, (user)</p>
+        </div>
+
+        <div class="item">
+          {{> Cas_Login }}
+        </div>
+      </div>
+
     </div>
   </div>
 </template>
