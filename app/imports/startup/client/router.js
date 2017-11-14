@@ -68,6 +68,15 @@ userRoutes.route('/filter', {
   },
 });
 
+export const submitPageRouteName = 'Submit_Page';
+userRoutes.route('/submit', {
+  name: submitPageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: submitPageRouteName });
+  },
+});
+
+
 /*                        MISC ROUTES                       */
 FlowRouter.notFound = {
   action() {
