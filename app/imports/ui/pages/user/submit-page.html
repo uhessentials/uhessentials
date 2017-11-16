@@ -3,19 +3,19 @@
   {{#if Template.subscriptionsReady}}
 
   <div class="ui text container segment">
+
     <div class="ui dividing header">
       <h1>Submit Information/Content</h1>
     </div>
 
     <div class="ui item">
       <h3>Rules for Submitting:</h3>
-      <p>1.</p>
-      <p>2.</p>
-      <p>3.</p>
-      <p>4.</p>
+      <p>1. Be nice.</p>
+      <p>2. No swearing.</p>
+      <p>3. No inappropriate content.</p>
     </div>
 
-    <hr />
+    <div class="ui divider"></div>
 
     <form class="ui equal width form profile-data-form {{ successClass }} {{ errorClass }}">
 
@@ -27,6 +27,21 @@
       <div class="field">
         <label>Information/Question</label>
         <textarea></textarea>
+      </div>
+
+      <div class="field">
+        <div class="ui selection dropdown">
+          <input type="hidden" name="thread">
+          <i class="dropdown icon"></i>
+          <div class="default text">Select Thread...</div>
+          <div class="menu">
+            <div class="item" data-value="PROF">Degree Programs</div>
+            <div class="item" data-value="FOOD">Food Services</div>
+            <div class="item" data-value="COMM">Commuting</div>
+            <div class="item" data-value="SECU">Campus Security</div>
+            <div class="item" data-value="SERV">Campus Services</div>
+          </div>
+        </div>
       </div>
 
       <div class="field">
