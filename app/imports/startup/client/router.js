@@ -68,13 +68,14 @@ userRoutes.route('/profile', {
   },
 });
 
-export const filterPageRouteName = 'Filter_Page';
-userRoutes.route('/filter', {
-  name: filterPageRouteName,
+export const submitPageRouteName = 'Submit_Page';
+userRoutes.route('/submit', {
+  name: submitPageRouteName,
   action() {
-    BlazeLayout.render('User_Layout', { main: filterPageRouteName });
+    BlazeLayout.render('User_Layout', { main: submitPageRouteName });
   },
 });
+
 
 /*                        MISC ROUTES                       */
 FlowRouter.notFound = {

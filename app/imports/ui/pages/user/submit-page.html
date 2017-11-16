@@ -1,0 +1,69 @@
+<template name="Submit_Page">
+
+  {{#if Template.subscriptionsReady}}
+
+  <div class="ui text container segment">
+
+    <div class="ui dividing header">
+      <h1>Submit Information/Content</h1>
+    </div>
+
+    <div class="ui item">
+      <h3>Rules for Submitting:</h3>
+      <p>1. Be nice.</p>
+      <p>2. No swearing.</p>
+      <p>3. No inappropriate content.</p>
+    </div>
+
+    <div class="ui divider"></div>
+
+    <form class="ui equal width form profile-data-form {{ successClass }} {{ errorClass }}">
+
+      <div class="field">
+        <label>Title</label>
+        <input type="text" name="title" placeholder="Subject">
+      </div>
+
+      <div class="field">
+        <label>Information/Question</label>
+        <textarea></textarea>
+      </div>
+
+      <div class="field">
+        <div class="ui selection dropdown">
+          <input type="hidden" name="thread">
+          <i class="dropdown icon"></i>
+          <div class="default text">Select Thread...</div>
+          <div class="menu">
+            <div class="item" data-value="PROF">Degree Programs</div>
+            <div class="item" data-value="FOOD">Food Services</div>
+            <div class="item" data-value="COMM">Commuting</div>
+            <div class="item" data-value="SECU">Campus Security</div>
+            <div class="item" data-value="SERV">Campus Services</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="ui checkbox">
+          <input type="checkbox" tabindex="0" class="hidden">
+          <label>I agree to the Terms and Conditions</label>
+        </div>
+      </div>
+
+      <div class="fields">
+        <button class="ui primary button" type="submit">Submit</button>
+        {{#if displaySuccessMessage}}
+        <div class="ui success message">
+          <p>Content submitted.</p>
+        </div>
+        {{/if}}
+      </div>
+
+    </form>
+
+  </div>
+
+  {{/if}}
+
+</template>
