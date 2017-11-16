@@ -3,7 +3,8 @@
     <div class="ui container">
       <div class="item"><h1>UH Essentials</h1></div>
       <a class="{{isActiveRoute " Profile_Page"}} item" href="{{pathFor "Profile_Page" username=routeUserName}}">Profile</a>
-      
+      <a class="{{isActiveRoute "Submit_Page"}} item" href="{{pathFor "Submit_Page" username=routeUserName}}">Submit</a>
+
       <div class="right aligned item">{{> Cas_Login }}</div>
 
     </div>
