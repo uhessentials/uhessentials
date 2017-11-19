@@ -11,6 +11,7 @@ import '/imports/ui/pages/directory';
 import '/imports/ui/pages/filter';
 import '/imports/ui/pages/landing';
 import '/imports/ui/pages/thread';
+import '/imports/ui/pages/topic';
 import '/imports/ui/pages/user';
 import '/imports/ui/stylesheets/style.css';
 import '/imports/api/base';

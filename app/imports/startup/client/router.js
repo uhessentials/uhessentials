@@ -84,6 +84,14 @@ userRoutes.route('/thread', {
   },
 });
 
+export const topicPageRouteName = 'Topic_Page';
+userRoutes.route('/topic', {
+  name: topicPageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: topicPageRouteName });
+  },
+});
+
 
 /*                        MISC ROUTES                       */
 FlowRouter.notFound = {
