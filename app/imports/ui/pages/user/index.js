@@ -1,3 +1,4 @@
+import './home-page.css';
 import './home-page.html';
 import './home-page';
 import './profile-page.html';
