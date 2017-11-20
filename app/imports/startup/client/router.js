@@ -76,6 +76,22 @@ userRoutes.route('/submit', {
   },
 });
 
+export const threadPageRouteName = 'Thread_Page';
+userRoutes.route('/thread', {
+  name: threadPageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: threadPageRouteName });
+  },
+});
+
+export const topicPageRouteName = 'Topic_Page';
+userRoutes.route('/topic', {
+  name: topicPageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: topicPageRouteName });
+  },
+});
+
 
 /*                        MISC ROUTES                       */
 FlowRouter.notFound = {
