@@ -52,6 +52,14 @@ const userRoutes = FlowRouter.group({
   triggersExit: [removeUserBodyClass],
 });
 
+export const homePageRouteName = 'Home_Page';
+userRoutes.route('/home', {
+  name: homePageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: homePageRouteName });
+  },
+});
+
 export const profilePageRouteName = 'Profile_Page';
 userRoutes.route('/profile', {
   name: profilePageRouteName,
@@ -60,13 +68,30 @@ userRoutes.route('/profile', {
   },
 });
 
-export const filterPageRouteName = 'Filter_Page';
-userRoutes.route('/filter', {
-  name: filterPageRouteName,
+export const submitPageRouteName = 'Submit_Page';
+userRoutes.route('/submit', {
+  name: submitPageRouteName,
   action() {
-    BlazeLayout.render('User_Layout', { main: filterPageRouteName });
+    BlazeLayout.render('User_Layout', { main: submitPageRouteName });
   },
 });
+
+export const threadPageRouteName = 'Thread_Page';
+userRoutes.route('/thread', {
+  name: threadPageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: threadPageRouteName });
+  },
+});
+
+export const topicPageRouteName = 'Topic_Page';
+userRoutes.route('/topic', {
+  name: topicPageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: topicPageRouteName });
+  },
+});
+
 
 /*                        MISC ROUTES                       */
 FlowRouter.notFound = {
