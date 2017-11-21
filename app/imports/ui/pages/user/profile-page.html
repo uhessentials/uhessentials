@@ -18,14 +18,21 @@
         {{> Text_Form_Control label="Standing" placeholder="Student/Teacher" value=profile.title errorMessage=(fieldError "title")}}
         {{> Text_Form_Control label="Gender" placeholder="Male/Female/Other" value=profile.title errorMessage=(fieldError "title")}}
         {{> Text_Form_Control label="Picture" placeholder="http://foo.com/shot.jpg" value=profile.picture errorMessage=(fieldError "picture")}}
+        {{> Text_Form_Control label="Campus Location" placeholder="University of Hawaii at Manoa" value=profile.title errorMessage=(fieldError "title")}}
       </div>
 
-      <div class="field">
+      <!--<div class="field">
         {{> Select_Form_Control label="Campus Location" options=interests errorMessage=(fieldError "interests") multiple=true }}
-      </div>
+      </div>-->
 
       {{> TextArea_Form_Control label="Bio" value=profile.bio placeholder="Short bio statement here" errorMessage=(fieldError "bio")}}
 
+      <div class="field">
+        <div class="ui checkbox">
+          <input type="checkbox" tabindex="0" class="hidden">
+          <label>I agree to the Terms and Conditions</label>
+        </div>
+      </div>
 
       <button class="ui primary button" type="submit">Submit</button>
       {{#if displaySuccessMessage}}
