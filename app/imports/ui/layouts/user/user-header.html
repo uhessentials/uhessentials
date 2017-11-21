@@ -1,8 +1,7 @@
 <template name="User_Header">
   <div class="ui top fixed borderless inverted menu" style="background-color: #024731">
     <div class="ui container">
-      <div class="item"><h1>UH Essentials</h1></div>
-      <a class="{{isActiveRoute "Home_Page"}} item" href="{{pathFor "Home_Page" username=routeUserName}}">Home</a>
+      <a class="{{isActiveRoute "Home_Page"}} item" href="{{pathFor "Home_Page" username=routeUserName}}"><h1>UH Essentials</h1></a>
       <a class="{{isActiveRoute "Profile_Page"}} item" href="{{pathFor "Profile_Page" username=routeUserName}}">Profile</a>
       <a class="{{isActiveRoute "Submit_Page"}} item" href="{{pathFor "Submit_Page" username=routeUserName}}">Submit</a>
       <a class="{{isActiveRoute "Thread_Page"}} item" href="{{pathFor "Thread_Page" username=routeUserName}}">Thread</a>
