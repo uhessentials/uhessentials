@@ -76,11 +76,43 @@ userRoutes.route('/submit', {
   },
 });
 
-export const threadPageRouteName = 'Thread_Page';
-userRoutes.route('/thread', {
-  name: threadPageRouteName,
+export const commutePageRouteName = 'Commute_Thread';
+userRoutes.route('/commute', {
+  name: commutePageRouteName,
   action() {
-    BlazeLayout.render('User_Layout', { main: threadPageRouteName });
+    BlazeLayout.render('User_Layout', { main: commutePageRouteName });
+  },
+});
+
+export const degreePageRouteName = 'Degree_Thread';
+userRoutes.route('/degree', {
+  name: degreePageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: degreePageRouteName });
+  },
+});
+
+export const eventsPageRouteName = 'Events_Thread';
+userRoutes.route('/events', {
+  name: eventsPageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: eventsPageRouteName });
+  },
+});
+
+export const foodPageRouteName = 'Food_Thread';
+userRoutes.route('/food', {
+  name: foodPageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: foodPageRouteName });
+  },
+});
+
+export const securityPageRouteName = 'Security_Thread';
+userRoutes.route('/security', {
+  name: securityPageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: securityPageRouteName });
   },
 });
 
