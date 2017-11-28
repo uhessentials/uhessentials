@@ -38,8 +38,10 @@ Template.Home_Page.helpers({
           return { label: interest.name, selected: _.contains(selectedInterests, interest.name) };
         });
   },
+  routeUserName() {
+    return FlowRouter.getParam('username');
+  },
 });
-
 
 Template.Home_Page.events({
   'submit .home-data-form'(event, instance) {
@@ -77,3 +79,4 @@ Template.Home_Page.events({
     }
   },
 });
+
