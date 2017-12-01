@@ -8,16 +8,16 @@ import { Interests } from '/imports/api/interest/InterestCollection';
 const displaySuccessMessage = 'displaySuccessMessage';
 const displayErrorMessages = 'displayErrorMessages';
 
-Template.Home_Page.onCreated(function onCreated() {
+Template.Commute_Thread.onCreated(function onCreated() {
   this.subscribe(Interests.getPublicationName());
   this.subscribe(Profiles.getPublicationName());
   this.messageFlags = new ReactiveDict();
   this.messageFlags.set(displaySuccessMessage, false);
   this.messageFlags.set(displayErrorMessages, false);
-  this.context = Profiles.getSchema().namedContext('Home_Page');
+  this.context = Profiles.getSchema().namedContext('Commute_Thread');
 });
 
-Template.Home_Page.helpers({
+Template.Commute_Thread.helpers({
   successClass() {
     return Template.instance().messageFlags.get(displaySuccessMessage) ? 'success' : '';
   },
@@ -38,12 +38,9 @@ Template.Home_Page.helpers({
           return { label: interest.name, selected: _.contains(selectedInterests, interest.name) };
         });
   },
-  routeUserName() {
-    return FlowRouter.getParam('username');
-  },
 });
 
-Template.Home_Page.events({
+Template.Commute_Thread.events({
   'submit .home-data-form'(event, instance) {
     event.preventDefault();
     const firstName = event.target.First.value;
@@ -55,13 +52,13 @@ Template.Home_Page.events({
     const selectedInterests = _.filter(event.target.Interests.selectedOptions, (option) => option.selected);
     const interests = _.map(selectedInterests, (option) => option.value);
 
-    const updatedHomeData = { firstName, lastName, title, picture, bio, interests,
+    const updatedCommuteData = { firstName, lastName, title, picture, bio, interests,
       username };
 
     // Clear out any old validation errors.
     instance.context.reset();
     // Invoke clean so that updatedProfileData reflects what will be inserted.
-    const cleanData = Profiles.getSchema().clean(updatedHomeData);
+    const cleanData = Profiles.getSchema().clean(updatedCommuteData);
     // Determine validity.
     instance.context.validate(cleanData);
 

@@ -28,9 +28,6 @@ class ProfileCollection extends BaseCollection {
       'interests.$': { type: String },
       title: { type: String, optional: true },
       picture: { type: SimpleSchema.RegEx.Url, optional: true },
-      github: { type: SimpleSchema.RegEx.Url, optional: true },
-      facebook: { type: SimpleSchema.RegEx.Url, optional: true },
-      instagram: { type: SimpleSchema.RegEx.Url, optional: true },
     }, { tracker: Tracker }));
   }
 
@@ -55,8 +52,7 @@ class ProfileCollection extends BaseCollection {
    * if one or more interests are not defined, or if github, facebook, and instagram are not URLs.
    * @returns The newly created docID.
    */
-  define({ firstName = '', lastName = '', username, bio = '', interests = [], picture = '', title = '', github = '',
-      facebook = '', instagram = '' }) {
+  define({ firstName = '', lastName = '', username, bio = '', interests = [], picture = '', title = '' }) {
     // make sure required fields are OK.
     const checkPattern = { firstName: String, lastName: String, username: String, bio: String, picture: String,
       title: String };
@@ -74,8 +70,7 @@ class ProfileCollection extends BaseCollection {
       throw new Meteor.Error(`${interests} contains duplicates`);
     }
 
-    return this._collection.insert({ firstName, lastName, username, bio, interests, picture, title, github,
-      facebook, instagram });
+    return this._collection.insert({ firstName, lastName, username, bio, interests, picture, title });
   }
 
   /**
@@ -92,10 +87,7 @@ class ProfileCollection extends BaseCollection {
     const interests = doc.interests;
     const picture = doc.picture;
     const title = doc.title;
-    const github = doc.github;
-    const facebook = doc.facebook;
-    const instagram = doc.instagram;
-    return { firstName, lastName, username, bio, interests, picture, title, github, facebook, instagram };
+    return { firstName, lastName, username, bio, interests, picture, title };
   }
 }
 
