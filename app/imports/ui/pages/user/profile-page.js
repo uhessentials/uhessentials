@@ -40,7 +40,6 @@ Template.Profile_Page.helpers({
   },
 });
 
-
 Template.Profile_Page.events({
   'submit .profile-data-form'(event, instance) {
     event.preventDefault();
