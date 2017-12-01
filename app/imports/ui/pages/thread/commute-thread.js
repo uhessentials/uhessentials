@@ -8,16 +8,16 @@ import { Interests } from '/imports/api/interest/InterestCollection';
 const displaySuccessMessage = 'displaySuccessMessage';
 const displayErrorMessages = 'displayErrorMessages';
 
-Template.Profile_Page.onCreated(function onCreated() {
+Template.Commute_Thread.onCreated(function onCreated() {
   this.subscribe(Interests.getPublicationName());
   this.subscribe(Profiles.getPublicationName());
   this.messageFlags = new ReactiveDict();
   this.messageFlags.set(displaySuccessMessage, false);
   this.messageFlags.set(displayErrorMessages, false);
-  this.context = Profiles.getSchema().namedContext('Profile_Page');
+  this.context = Profiles.getSchema().namedContext('Commute_Thread');
 });
 
-Template.Profile_Page.helpers({
+Template.Commute_Thread.helpers({
   successClass() {
     return Template.instance().messageFlags.get(displaySuccessMessage) ? 'success' : '';
   },
@@ -40,26 +40,25 @@ Template.Profile_Page.helpers({
   },
 });
 
-Template.Profile_Page.events({
-  'submit .profile-data-form'(event, instance) {
+Template.Commute_Thread.events({
+  'submit .home-data-form'(event, instance) {
     event.preventDefault();
     const firstName = event.target.First.value;
     const lastName = event.target.Last.value;
-    const standing = event.target.Standing.value;
-    const gender = event.target.Gender.value;
+    const title = event.target.Title.value;
     const username = FlowRouter.getParam('username'); // schema requires username.
     const picture = event.target.Picture.value;
     const bio = event.target.Bio.value;
     const selectedInterests = _.filter(event.target.Interests.selectedOptions, (option) => option.selected);
     const interests = _.map(selectedInterests, (option) => option.value);
 
-    const updatedProfileData = { firstName, lastName, standing, picture, bio, interests,
-      gender, username };
+    const updatedCommuteData = { firstName, lastName, title, picture, bio, interests,
+      username };
 
     // Clear out any old validation errors.
     instance.context.reset();
     // Invoke clean so that updatedProfileData reflects what will be inserted.
-    const cleanData = Profiles.getSchema().clean(updatedProfileData);
+    const cleanData = Profiles.getSchema().clean(updatedCommuteData);
     // Determine validity.
     instance.context.validate(cleanData);
 
