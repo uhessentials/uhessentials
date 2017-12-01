@@ -19,18 +19,9 @@
 
     <form class="ui equal width form profile-data-form {{ successClass }} {{ errorClass }}">
 
-      <div class="field">
-        <label>Title</label>
-        <input type="text" name="title" placeholder="Subject">
-
         {{> Text_Form_Control label="Title" placeholder="Title/Subject" value=profile.firstName errorMessage=(fieldError "firstName")}}
 
-      </div>
-
-      <div class="field">
-        <label>Information/Question</label>
-        <textarea></textarea>
-      </div>
+        {{> TextArea_Form_Control label="Information/Question" placeholder="Title/Subject" value=profile.firstName errorMessage=(fieldError "firstName")}}
 
       <div class="field">
         <div class="ui selection dropdown">
