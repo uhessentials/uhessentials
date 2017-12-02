@@ -2,29 +2,23 @@
 /* eslint-env mocha */
 
 import { Profiles } from '/imports/api/profile/ProfileCollection';
-import { Interests } from '/imports/api/interest/InterestCollection';
 import { Meteor } from 'meteor/meteor';
 import { expect } from 'chai';
 import { removeAllEntities } from '/imports/api/base/BaseUtilities';
 
 if (Meteor.isServer) {
   describe('ProfileCollection', function testSuite() {
-    const interestName = 'Software Engineering';
-    const interestDescription = 'Tools for software development';
     const firstName = 'Philip';
     const lastName = 'Johnson';
     const username = 'johnson';
     const gender = 'male';
     const bio = 'I have been a professor of computer science at UH since 1990.';
-    const interests = [interestName];
     const picture = 'http://philipmjohnson.org/headshot.jpg';
     const title = 'Professor Computer Science';
-    const defineObject = { firstName, lastName, username, bio, interests, picture, title, gender };
+    const defineObject = { firstName, lastName, username, bio, picture, title, gender };
 
     before(function setup() {
       removeAllEntities();
-      // Define a sample interest.
-      Interests.define({ name: interestName, description: interestDescription });
     });
 
     after(function teardown() {
@@ -41,7 +35,6 @@ if (Meteor.isServer) {
       expect(doc.username).to.equal(username);
       expect(doc.gender).to.equal(gender);
       expect(doc.bio).to.equal(bio);
-      expect(doc.interests[0]).to.equal(interestName);
       expect(doc.picture).to.equal(picture);
       expect(doc.title).to.equal(title);
       // Check that multiple definitions with the same email address fail
@@ -55,15 +48,13 @@ if (Meteor.isServer) {
       Profiles.removeIt(docID);
     });
 
-    it('#define (illegal interest)', function test() {
-      const illegalInterests = ['foo'];
-      const defineObject2 = { firstName, lastName, username, bio, interests: illegalInterests, picture, title };
+    it( function test() {
+      const defineObject2 = { firstName, lastName, username, bio, picture, title };
       expect(function foo() { Profiles.define(defineObject2); }).to.throw(Error);
     });
 
-    it('#define (duplicate interests)', function test() {
-      const duplicateInterests = [interestName, interestName];
-      const defineObject3 = { firstName, lastName, username, bio, interests: duplicateInterests, picture, title };
+    it( function test() {
+      const defineObject3 = { firstName, lastName, username, bio, picture, title };
       expect(function foo() { Profiles.define(defineObject3); }).to.throw(Error);
     });
   });
