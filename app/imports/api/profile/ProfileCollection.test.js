@@ -8,6 +8,7 @@ import { removeAllEntities } from '/imports/api/base/BaseUtilities';
 
 if (Meteor.isServer) {
   describe('ProfileCollection', function testSuite() {
+<<<<<<< HEAD
     const firstName = 'April';
     const lastName = 'Bala';
     const username = 'aaibala';
@@ -18,6 +19,16 @@ if (Meteor.isServer) {
     const bio = 'I am a student at UH Manoa.';
 
     const defineObject = { firstName, lastName, username, standing, gender, picture, campus, bio };
+=======
+    const firstName = 'Philip';
+    const lastName = 'Johnson';
+    const username = 'johnson';
+    const gender = 'male';
+    const bio = 'I have been a professor of computer science at UH since 1990.';
+    const picture = 'http://philipmjohnson.org/headshot.jpg';
+    const title = 'Professor Computer Science';
+    const defineObject = { firstName, lastName, username, bio, picture, title, gender };
+>>>>>>> master
 
     before(function setup() {
       removeAllEntities();
@@ -37,6 +48,10 @@ if (Meteor.isServer) {
       expect(doc.username).to.equal(username);
       expect(doc.standing).to.equal(standing);
       expect(doc.gender).to.equal(gender);
+<<<<<<< HEAD
+=======
+      expect(doc.bio).to.equal(bio);
+>>>>>>> master
       expect(doc.picture).to.equal(picture);
       expect(doc.campus).to.equal(campus);
       expect(doc.bio).to.equal(bio);
@@ -50,6 +65,19 @@ if (Meteor.isServer) {
       expect(Profiles.isDefined(docID)).to.be.true;
       Profiles.removeIt(docID);
     });
+<<<<<<< HEAD
+=======
+
+    it( function test() {
+      const defineObject2 = { firstName, lastName, username, bio, picture, title };
+      expect(function foo() { Profiles.define(defineObject2); }).to.throw(Error);
+    });
+
+    it( function test() {
+      const defineObject3 = { firstName, lastName, username, bio, picture, title };
+      expect(function foo() { Profiles.define(defineObject3); }).to.throw(Error);
+    });
+>>>>>>> master
   });
 }
 

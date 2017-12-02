@@ -7,15 +7,15 @@ import { Profiles } from '/imports/api/profile/ProfileCollection';
 const displaySuccessMessage = 'displaySuccessMessage';
 const displayErrorMessages = 'displayErrorMessages';
 
-Template.Submit_Page.onCreated(function onCreated() {
+Template.Commute_Thread.onCreated(function onCreated() {
   this.subscribe(Profiles.getPublicationName());
   this.messageFlags = new ReactiveDict();
   this.messageFlags.set(displaySuccessMessage, false);
   this.messageFlags.set(displayErrorMessages, false);
-  this.context = Profiles.getSchema().namedContext('Submit_Page');
+  this.context = Profiles.getSchema().namedContext('Commute_Thread');
 });
 
-Template.Submit_Page.helpers({
+Template.Commute_Thread.helpers({
   successClass() {
     return Template.instance().messageFlags.get(displaySuccessMessage) ? 'success' : '';
   },
@@ -30,24 +30,22 @@ Template.Submit_Page.helpers({
   },
 });
 
-
-Template.Submit_Page.events({
-  'submit .profile-data-form'(event, instance) {
+Template.Commute_Thread.events({
+  'submit .home-data-form'(event, instance) {
     event.preventDefault();
     const firstName = event.target.First.value;
     const lastName = event.target.Last.value;
-    const standing = event.target.Standing.value;
-    const gender = event.target.Gender.value;
+    const title = event.target.Title.value;
     const username = FlowRouter.getParam('username'); // schema requires username.
     const picture = event.target.Picture.value;
     const bio = event.target.Bio.value;
 
-    const updatedSubmitData = { firstName, lastName, standing, picture, bio, gender, username };
+    const updatedCommuteData = { firstName, lastName, title, picture, bio, username };
 
     // Clear out any old validation errors.
     instance.context.reset();
     // Invoke clean so that updatedProfileData reflects what will be inserted.
-    const cleanData = Profiles.getSchema().clean(updatedSubmitData);
+    const cleanData = Profiles.getSchema().clean(updatedCommuteData);
     // Determine validity.
     instance.context.validate(cleanData);
 
