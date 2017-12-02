@@ -5,12 +5,14 @@
       "name": "ProfileCollection",
       "contents": [
         {
-          "firstName": "Lee",
-          "lastName": "Altenberg",
-          "username": "altenber",
-          "bio": "I am an Associate Professor of Information and Computer Sciences at the University of Hawaii.",
-          "title": "Associate Professor, Information and Computer Sciences",
-          "picture": "/images/altenberg.jpg"
+          "firstName": "April",
+          "lastName": "Bala",
+          "username": "aaibala",
+          "standing": "Student",
+          "gender": "Female",
+          "picture": "",
+          "campus": "University of Hawaii at Manoa",
+          "bio": "I am a student at UH Manoa."
         },
         {
           "firstName": "Kyungim",
