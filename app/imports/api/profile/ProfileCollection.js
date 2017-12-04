@@ -19,11 +19,11 @@ class ProfileCollection extends BaseCollection {
   constructor() {
     super('Profile', new SimpleSchema({
       username: { type: String },
-      firstName: { type: String },
-      lastName: { type: String },
-      standing: { type: String },
+      firstName: { type: String, optional: true },
+      lastName: { type: String, optional: true },
+      standing: { type: String, optional: true },
       'standing.$': { type: String },
-      campus: { type: String },
+      campus: { type: String, optional: true },
       'campus.$': { type: String },
       gender: { type: String, optional: true },
       'gender.$': { type: String },
