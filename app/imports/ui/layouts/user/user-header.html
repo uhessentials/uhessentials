@@ -2,9 +2,17 @@
   <div class="ui top fixed borderless inverted menu" style="background-color: #024731">
     <div class="ui container">
       <a class="{{isActiveRoute "Home_Page"}} item" href="{{pathFor "Home_Page" username=routeUserName}}"><h1>UH Essentials</h1></a>
+<<<<<<< HEAD
       <a class="{{isActiveRoute "Profile_Page"}} item" href="{{pathFor "Profile_Page" username=routeUserName}}">Profile</a>
       <a class="{{isActiveRoute "Submit_Page"}} item" href="{{pathFor "Submit_Page" username=routeUserName}}">Submit</a>
       <div class="right aligned item">{{> Cas_Login }}</div>
+=======
+      <a class="{{isActiveRoute "Submit_Page"}} item" href="{{pathFor "Submit_Page" username=routeUserName}}">Submit New Topic</a>
+      <div class="right aligned item">
+        <a class="{{isActiveRoute "Profile_Page"}} item" href="{{pathFor "Profile_Page" username=routeUserName}}">Profile</a>
+        {{> Cas_Login }}
+      </div>
+>>>>>>> db7794632e35828b6254e51eb4db93e98924b45d
     </div>
   </div>
 </template>
