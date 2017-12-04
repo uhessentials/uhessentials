@@ -24,12 +24,12 @@ class ProfileCollection extends BaseCollection {
       lastName: { type: String, optional: true },
       standing: { type: String, optional: true },
       'standing.$': { type: String },
+      campus: { type: String, optional: true },
+      'campus.$': { type: String },
       gender: { type: String, optional: true },
       'gender.$': { type: String },
       title: { type: String, optional: true },
       picture: { type: SimpleSchema.RegEx.Url, optional: true },
-      campus: { type: String, optional: true },
-      'campus.$': { type: String },
       bio: { type: String, optional: true },
     }, { tracker: Tracker }));
   }
@@ -41,9 +41,9 @@ class ProfileCollection extends BaseCollection {
    *                   lastName: 'Bala',
    *                   username: 'aaibala',
    *                   standing: 'Student',
+   *                   campus: 'University of Hawaii at Manoa',
    *                   gender: 'Female',
    *                   picture: '',
-   *                   campus: 'University of Hawaii at Manoa',
    *                   bio: 'I am a student at UH Manoa.',
    * @param { Object } description Object with required key username.
    * Remaining keys are optional.
@@ -51,25 +51,25 @@ class ProfileCollection extends BaseCollection {
    * @throws { Meteor.Error } If a user with the supplied username already exists.
    * @returns The newly created docID.
    */
-  define({ firstName = '', lastName = '', username, standing = '', gender = '', picture = '', campus = '', bio = '' }) {
+  define({ firstName = '', lastName = '', username, standing = '', campus = '', gender = '', picture = '', bio = '' }) {
     // make sure required fields are OK.
     const checkPattern = {
       firstName: String,
       lastName: String,
       username: String,
       standing: String,
+      campus: String,
       gender: String,
       picture: String,
-      campus: String,
       bio: String,
     };
-    check({ firstName, lastName, username, standing, gender, picture, campus, bio }, checkPattern);
+    check({ firstName, lastName, username, standing, campus, gender, picture, bio }, checkPattern);
 
     if (this.find({ username }).count() > 0) {
       throw new Meteor.Error(`${username} is previously defined in another Profile`);
     }
 
-    return this._collection.insert({ firstName, lastName, username, standing, gender, picture, campus, bio });
+    return this._collection.insert({ firstName, lastName, username, standing, campus, gender, picture, bio });
   }
 
   /**
@@ -83,12 +83,12 @@ class ProfileCollection extends BaseCollection {
     const lastName = doc.lastName;
     const username = doc.username;
     const standing = doc.standing;
+    const campus = doc.campus;
     const gender = doc.gender;
     const picture = doc.picture;
-    const campus = doc.campus;
     const bio = doc.bio;
 
-    return { firstName, lastName, username, standing, gender, picture, campus, bio };
+    return { firstName, lastName, username, standing, campus, gender, picture, bio };
   }
 }
 
