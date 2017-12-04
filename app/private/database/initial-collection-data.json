@@ -19,7 +19,8 @@
           "lastName": "Baek",
           "username": "baek",
           "bio": "I am an Associate Professor of Information and Computer Sciences at the University of Hawaii.",
-          "title": "Associate Professor, Information and Computer Sciences",
+          "standing": "ICS Associate Professor",
+          "campus": "University of Hawaii at Manoa",
           "picture": "/images/baek.jpg"
         },
         {
@@ -27,7 +28,8 @@
           "lastName": "Biagioni",
           "username": "esb",
           "bio": "I am an Associate Professor of Information and Computer Sciences at the University of Hawaii.",
-          "title": "Associate Professor, Information and Computer Sciences",
+          "standing": "ICS Associate Professor",
+          "campus": "University of Hawaii at Manoa",
           "picture": "/images/biagioni.jpg"
         },
         {
@@ -35,16 +37,17 @@
           "lastName": "Binsted",
           "username": "binsted",
           "bio": "I am an Associate Professor of Information and Computer Sciences at the University of Hawaii.",
-          "title": "Associate Professor, Information and Computer Sciences",
+          "standing": "ICS Associate Professor",
+          "campus": "University of Hawaii at Manoa",
           "picture": "/images/binsted.jpg"
         },
         {
           "firstName": "Henri",
           "lastName": "Casanova",
           "username": "henric",
-          "github": "henricasanova",
           "bio": "I am a Professor of Information and Computer Sciences at the University of Hawaii.",
-          "title": "Professor, Information and Computer Sciences",
+          "standing": "ICS Professor",
+          "campus": "University of Hawaii at Manoa",
           "picture": "/images/casanova.jpg"
         }
       ]
