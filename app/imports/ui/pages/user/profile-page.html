@@ -11,19 +11,14 @@
       <div class="fields">
         {{> Text_Form_Control label="First" placeholder="John" value=profile.firstName errorMessage=(fieldError "firstName")}}
         {{> Text_Form_Control label="Last" placeholder="Smith" value=profile.lastName errorMessage=(fieldError "lastName")}}
-
       </div>
 
       <div class="field">
-        {{> Text_Form_Control label="Standing" placeholder="Student/Teacher" value=profile.title errorMessage=(fieldError "title")}}
-        {{> Text_Form_Control label="Gender" placeholder="Male/Female/Other" value=profile.title errorMessage=(fieldError "title")}}
+        {{> Text_Form_Control label="Standing" placeholder="Student/Teacher" value=profile.standing errorMessage=(fieldError "standing")}}
+        {{> Text_Form_Control label="Campus" placeholder="University of Hawaii at Manoa" value=profile.campus errorMessage=(fieldError "campus")}}
+        {{> Text_Form_Control label="Gender" placeholder="Male/Female/Other" value=profile.gender errorMessage=(fieldError "gender")}}
         {{> Text_Form_Control label="Picture" placeholder="http://foo.com/shot.jpg" value=profile.picture errorMessage=(fieldError "picture")}}
-        {{> Text_Form_Control label="Campus Location" placeholder="University of Hawaii at Manoa" value=profile.title errorMessage=(fieldError "title")}}
       </div>
-
-      <!--<div class="field">
-        {{> Select_Form_Control label="Campus Location" options=interests errorMessage=(fieldError "interests") multiple=true }}
-      </div>-->
 
       {{> TextArea_Form_Control label="Bio" value=profile.bio placeholder="Short bio statement here" errorMessage=(fieldError "bio")}}
 

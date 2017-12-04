@@ -36,12 +36,13 @@ Template.Profile_Page.events({
     const firstName = event.target.First.value;
     const lastName = event.target.Last.value;
     const standing = event.target.Standing.value;
+    const campus = event.target.Campus.value;
     const gender = event.target.Gender.value;
     const username = FlowRouter.getParam('username'); // schema requires username.
     const picture = event.target.Picture.value;
     const bio = event.target.Bio.value;
 
-    const updatedProfileData = { firstName, lastName, standing, picture, bio, gender, username };
+    const updatedProfileData = { firstName, lastName, standing, campus, gender,picture, bio, username };
 
     // Clear out any old validation errors.
     instance.context.reset();

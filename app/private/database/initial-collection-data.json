@@ -1,19 +1,9 @@
 {
-  "comment": "Initial contents for the BowFolios database. For development purposes only.",
+  "comment": "Initial contents for the UH Essentials database. For development purposes only.",
   "collections": [
     {
       "name": "ProfileCollection",
       "contents": [
-        {
-          "firstName": "April",
-          "lastName": "Bala",
-          "username": "aaibala",
-          "standing": "Student",
-          "gender": "Female",
-          "picture": "",
-          "campus": "University of Hawaii at Manoa",
-          "bio": "I am a student at UH Manoa."
-        },
         {
           "firstName": "Kyungim",
           "lastName": "Baek",
@@ -49,6 +39,15 @@
           "standing": "ICS Professor",
           "campus": "University of Hawaii at Manoa",
           "picture": "/images/casanova.jpg"
+        },
+        {
+          "firstName": "Lee",
+          "lastName": "Altenberg",
+          "username": "altenber",
+          "bio": "I am an Associate Professor of Information and Computer Sciences at the University of Hawaii.",
+          "standing": "ICS Associate Professor",
+          "campus": "University of Hawaii at Manoa",
+          "picture": "/images/altenberg.jpg"
         }
       ]
     }
