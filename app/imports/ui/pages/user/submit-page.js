@@ -32,17 +32,13 @@ Template.Submit_Page.helpers({
 
 
 Template.Submit_Page.events({
-  'submit .profile-data-form'(event, instance) {
+  'submit .submit-data-form'(event, instance) {
     event.preventDefault();
-    const firstName = event.target.First.value;
-    const lastName = event.target.Last.value;
-    const standing = event.target.Standing.value;
-    const gender = event.target.Gender.value;
+    const title = event.target.Title.value;
     const username = FlowRouter.getParam('username'); // schema requires username.
-    const picture = event.target.Picture.value;
-    const bio = event.target.Bio.value;
+    const info = event.target.Info.value;
 
-    const updatedSubmitData = { firstName, lastName, standing, picture, bio, gender, username };
+    const updatedSubmitData = { title, username, info };
 
     // Clear out any old validation errors.
     instance.context.reset();
