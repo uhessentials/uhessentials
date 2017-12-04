@@ -19,16 +19,14 @@ class ProfileCollection extends BaseCollection {
   constructor() {
     super('Profile', new SimpleSchema({
       username: { type: String },
-      // Remainder are optional
-      firstName: { type: String, optional: true },
-      lastName: { type: String, optional: true },
-      standing: { type: String, optional: true },
+      firstName: { type: String },
+      lastName: { type: String },
+      standing: { type: String },
       'standing.$': { type: String },
-      campus: { type: String, optional: true },
+      campus: { type: String },
       'campus.$': { type: String },
       gender: { type: String, optional: true },
       'gender.$': { type: String },
-      title: { type: String, optional: true },
       picture: { type: SimpleSchema.RegEx.Url, optional: true },
       bio: { type: String, optional: true },
     }, { tracker: Tracker }));
@@ -68,7 +66,6 @@ class ProfileCollection extends BaseCollection {
     if (this.find({ username }).count() > 0) {
       throw new Meteor.Error(`${username} is previously defined in another Profile`);
     }
-
     return this._collection.insert({ firstName, lastName, username, standing, campus, gender, picture, bio });
   }
 
