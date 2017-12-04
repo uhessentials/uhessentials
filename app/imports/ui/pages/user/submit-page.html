@@ -17,32 +17,45 @@
 
     <div class="ui divider"></div>
 
-    <form class="ui equal width form profile-data-form {{ successClass }} {{ errorClass }}">
+    <form class="ui equal width form submit-data-form {{ successClass }} {{ errorClass }}">
 
       <div class="field">
+        {{> Text_Form_Control label="Title" placeholder="Subject" value=submit.title errorMessage=(fieldError
+        "title")}}
+      </div>
+
+      <!-- div class="field">
         <label>Title</label>
         <input type="text" name="title" placeholder="Subject">
-      </div>
+      </div -->
 
       <div class="field">
+        <label>Thread</label>
+        <select class="ui fluid dropdown" name="Thread">
+          <option value="">Select Thread...</option>
+          <option value="Degree Programs">Degree Programs</option>
+          <option value="Food Services">Food Services</option>
+          <option value="Commuting">Commuting</option>
+          <option value="Campus Security">Campus Security</option>
+          <option value="Campus Services">Campus Services</option>
+        </select>
+      </div>
+
+      <!-- div class="field">
+        {{> Select_Form_Control label="Thread" placeholder="Select Thread..." options=threadName
+        errorMessage=(fieldError "threadName") multiple=false }}
+      </div -->
+
+
+      <div class="field">
+        {{> TextArea_Form_Control label="Information/Question" placeholder="" value=submit.info
+        errorMessage=(fieldError "info")}}
+      </div>
+
+      <!-- div class="field">
         <label>Information/Question</label>
         <textarea></textarea>
-      </div>
-
-      <div class="field">
-        <div class="ui selection dropdown">
-          <input type="hidden" name="thread">
-          <i class="dropdown icon"></i>
-          <div class="default text">Select Thread...</div>
-          <div class="menu">
-            <div class="item" data-value="PROF">Degree Programs</div>
-            <div class="item" data-value="FOOD">Food Services</div>
-            <div class="item" data-value="COMM">Commuting</div>
-            <div class="item" data-value="SECU">Campus Security</div>
-            <div class="item" data-value="SERV">Campus Services</div>
-          </div>
-        </div>
-      </div>
+      </div -->
 
       <div class="field">
         <div class="ui checkbox">

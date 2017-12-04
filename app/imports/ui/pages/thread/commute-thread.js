@@ -3,13 +3,11 @@ import { ReactiveDict } from 'meteor/reactive-dict';
 import { FlowRouter } from 'meteor/kadira:flow-router';
 import { _ } from 'meteor/underscore';
 import { Profiles } from '/imports/api/profile/ProfileCollection';
-import { Interests } from '/imports/api/interest/InterestCollection';
 
 const displaySuccessMessage = 'displaySuccessMessage';
 const displayErrorMessages = 'displayErrorMessages';
 
 Template.Commute_Thread.onCreated(function onCreated() {
-  this.subscribe(Interests.getPublicationName());
   this.subscribe(Profiles.getPublicationName());
   this.messageFlags = new ReactiveDict();
   this.messageFlags.set(displaySuccessMessage, false);
@@ -30,6 +28,8 @@ Template.Commute_Thread.helpers({
   profile() {
     return Profiles.findDoc(FlowRouter.getParam('username'));
   },
+<<<<<<< HEAD
+<<<<<<< HEAD
   interests() {
     const profile = Profiles.findDoc(FlowRouter.getParam('username'));
     const selectedInterests = profile.interests;
@@ -38,6 +38,14 @@ Template.Commute_Thread.helpers({
           return { label: interest.name, selected: _.contains(selectedInterests, interest.name) };
         });
   },
+
+  routeUserName() {
+    return FlowRouter.getParam('username');
+  },
+=======
+>>>>>>> master
+=======
+>>>>>>> master
 });
 
 Template.Commute_Thread.events({
@@ -49,11 +57,8 @@ Template.Commute_Thread.events({
     const username = FlowRouter.getParam('username'); // schema requires username.
     const picture = event.target.Picture.value;
     const bio = event.target.Bio.value;
-    const selectedInterests = _.filter(event.target.Interests.selectedOptions, (option) => option.selected);
-    const interests = _.map(selectedInterests, (option) => option.value);
 
-    const updatedCommuteData = { firstName, lastName, title, picture, bio, interests,
-      username };
+    const updatedCommuteData = { firstName, lastName, title, picture, bio, username };
 
     // Clear out any old validation errors.
     instance.context.reset();
