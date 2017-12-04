@@ -30,6 +30,7 @@ Template.Commute_Thread.helpers({
   },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   interests() {
     const profile = Profiles.findDoc(FlowRouter.getParam('username'));
     const selectedInterests = profile.interests;
@@ -42,6 +43,8 @@ Template.Commute_Thread.helpers({
   routeUserName() {
     return FlowRouter.getParam('username');
   },
+=======
+>>>>>>> master
 =======
 >>>>>>> master
 =======
