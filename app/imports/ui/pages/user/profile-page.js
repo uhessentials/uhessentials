@@ -42,7 +42,7 @@ Template.Profile_Page.events({
     const picture = event.target.Picture.value;
     const bio = event.target.Bio.value;
 
-    const updatedProfileData = { firstName, lastName, standing, campus, gender,picture, bio, username };
+    const updatedProfileData = { firstName, lastName, standing, campus, gender, picture, bio, username };
 
     // Clear out any old validation errors.
     instance.context.reset();
