@@ -36,11 +36,6 @@ Template.Submit_Page.events({
     event.preventDefault();
     const title = event.target.Title.value;
     const username = FlowRouter.getParam('username'); // schema requires username.
-
-    const picture = event.target.Picture.value;
-    const bio = event.target.Bio.value;
-
-    const updatedSubmitData = { firstName, lastName, standing, picture, bio, gender, username };
     const info = event.target.Info.value;
 
     const updatedSubmitData = { title, username, info };

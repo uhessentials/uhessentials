@@ -43,22 +43,40 @@ Template.Profile_Page.events({
 
     const updatedProfileData = { firstName, lastName, standing, picture, bio, gender, username };
 
+    /**
     // Clear out any old validation errors.
     instance.context.reset();
     // Invoke clean so that updatedProfileData reflects what will be inserted.
     const cleanData = Profiles.getSchema().clean(updatedProfileData);
     // Determine validity.
     instance.context.validate(cleanData);
+     */
 
+    // Clear out any old validation errors.
+    instance.context.resetValidation();
+    // Invoke clean so that newStudentData reflects what will be inserted.
+    const cleanData = Profiles.getSchema().clean(updatedProfileData);
+    // Determine validity.
+    instance.context.validate(cleanData);
+    if (instance.context.isValid()) {
+      Profiles.insert(cleanData);
+      instance.messageFlags.set(displayErrorMessages, false);
+      FlowRouter.go('Home_Page');
+    } else {
+      instance.messageFlags.set(displayErrorMessages, true);
+    }
+
+    /**
     if (instance.context.isValid()) {
       const docID = Profiles.findDoc(FlowRouter.getParam('username'))._id;
       const id = Profiles.update(docID, { $set: cleanData });
       instance.messageFlags.set(displaySuccessMessage, id);
       instance.messageFlags.set(displayErrorMessages, false);
+      FlowRouter.go('Home_Page');
     } else {
       instance.messageFlags.set(displaySuccessMessage, false);
       instance.messageFlags.set(displayErrorMessages, true);
-    }
+    } **/
   },
 });
 

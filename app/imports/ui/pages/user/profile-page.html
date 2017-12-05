@@ -9,7 +9,7 @@
     <form class="ui equal width form profile-data-form {{ successClass }} {{ errorClass }}">
 
       <div class="fields">
-        {{> Text_Form_Control label="First" placeholder="John" value=profile.firstName errorMessage=(fieldError "firstName")}}
+        {{> Text_Form_Control label="First" required = true errorMessage=(fieldError "firstName")}}
         {{> Text_Form_Control label="Last" placeholder="Smith" value=profile.lastName errorMessage=(fieldError "lastName")}}
 
       </div>
@@ -18,8 +18,26 @@
         {{> Text_Form_Control label="Standing" placeholder="Student/Teacher" value=profile.title errorMessage=(fieldError "title")}}
         {{> Text_Form_Control label="Gender" placeholder="Male/Female/Other" value=profile.title errorMessage=(fieldError "title")}}
         {{> Text_Form_Control label="Picture" placeholder="http://foo.com/shot.jpg" value=profile.picture errorMessage=(fieldError "picture")}}
-        {{> Text_Form_Control label="Campus Location" placeholder="University of Hawaii at Manoa" value=profile.title errorMessage=(fieldError "title")}}
+       {{> Text_Form_Control label="Campus Location" placeholder="University of Hawaii at Manoa" value=profile.title errorMessage=(fieldError "title")}}
       </div>
+
+      <!--
+      <div class="field">
+        <label>Campus Location</label>
+        <select class="ui fluid dropdown" name="Thread">
+          <option value="">Select Campus...</option>
+          <option value="Degree Programs">UH Manoa</option>
+          <option value="Food Services">UH West Oahu</option>
+          <option value="Campus Services">UH Hilo</option>
+          <option value="Commuting">Kapiolani CC</option>
+          <option value="Campus Security">Honolulu CC</option>
+          <option value="Campus Services">Leeward CC</option>
+          <option value="Campus Services">Windward CC</option>
+          <option value="Campus Services">Hawaii CC</option>
+          <option value="Campus Services">Kauai CC</option>
+        </select>
+      </div>
+      -->
 
       <!--<div class="field">
         {{> Select_Form_Control label="Campus Location" options=interests errorMessage=(fieldError "interests") multiple=true }}
