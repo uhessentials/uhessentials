@@ -1,0 +1,27 @@
+/* unvisited link */
+a {
+  color: black;
+}
+
+/* visited link */
+a:visited {
+  color: black;
+}
+
+/* mouse over link */
+a:hover {
+  color: green;
+  font-weight: bold;
+}
+
+h4 {
+  text-decoration: underline;
+}
+
+.ui.small.feed {
+  margin-left: 50px;
+}
+
+.thread.description {
+  color: red;
+}
