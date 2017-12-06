@@ -1,10 +1,15 @@
 import './commute-thread.css';
 import './commute-thread.html';
+import './commute-thread.js';
 import './degree-thread.css';
 import './degree-thread.html';
+import './degree-thread.js';
 import './events-thread.css';
 import './events-thread.html';
+import './events-thread.js';
 import './food-thread.css';
 import './food-thread.html';
+import './food-thread.js';
 import './security-thread.css';
 import './security-thread.html';
+import './security-thread.js';
