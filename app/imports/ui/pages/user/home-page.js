@@ -62,5 +62,7 @@ Template.Home_Page.events({
       instance.messageFlags.set(displayErrorMessages, true);
     }
   },
+
+
 });
 
