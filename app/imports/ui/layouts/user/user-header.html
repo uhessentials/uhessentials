@@ -1,7 +1,25 @@
 <template name="User_Header">
-  <div class="ui top fixed borderless inverted menu" style="background-color: #024731">
+  <div class="ui top fixed borderless inverted menu">
     <div class="ui container">
-      <a class="{{isActiveRoute "Home_Page"}} item" href="{{pathFor "Home_Page" username=routeUserName}}"><h1>UH Essentials</h1></a>
+      <div class="item"><h1>UH Essentials</h1></div>
+      <a class="{{isActiveRoute "Home_Page"}} item" href="{{pathFor "Home_Page" username=routeUserName}}">Home</a>
+
+      <div class="ui simple dropdown item">
+        <a class="horizontally fitted item">Q&A Threads</a>
+        <div class="menu">
+          <a class="{{isActiveRoute "Events_Thread"}} item" href="{{pathFor "Events_Thread"
+          username=routeUserName}}">Campus Events</a>
+          <a class="{{isActiveRoute " Security_Thread"}} item" href="{{pathFor "Security_Thread"
+          username=routeUserName}}">Campus Security</a>
+          <a class="{{isActiveRoute "Commute_Thread"}} item" href="{{pathFor "Commute_Thread"
+          username=routeUserName}}">Commuting</a>
+          <a class="{{isActiveRoute "Degree_Thread"}} item" href="{{pathFor "Degree_Thread"
+          username=routeUserName}}">Degree Programs</a>
+          <a class="{{isActiveRoute " Food_Thread"}} item" href="{{pathFor "Food_Thread"
+          username=routeUserName}}">Food Services</a>
+        </div>
+      </div>
+
       <a class="{{isActiveRoute "Submit_Page"}} item" href="{{pathFor "Submit_Page" username=routeUserName}}">Submit New Topic</a>
 
       <div class="right aligned item">
