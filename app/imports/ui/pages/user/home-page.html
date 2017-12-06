@@ -8,7 +8,7 @@
       Home
     </div>
 
-    <div class="ui container">
+    <!--div class="ui container">
       <div class="ui segment">
         <h1>
         <a class="{{isActiveRoute "Degree_Thread"}} item" href="{{pathFor "Degree_Thread"
@@ -42,64 +42,61 @@
           username=routeUserName}}">Security</a>
         </h1>
       </div>
-
-    </div>
+    </div -->
 
     <div class="ui accordion">
 
       <!-- Campus Events -->
-      <div class="active title">
+      <div class="title">
         <i class="dropdown icon"></i>
         <a class="{{isActiveRoute " Events_Thread"}} item" href="{{pathFor "Events_Thread"
         username=routeUserName}}">Campus Events</a>
       </div>
-      <div class="active content">
+      <div class="content">
         <p>A thread about events going on around campus. This includes library and bookstore hours, campus events, gym hours, etc.</p>
         <p>Recent Posts:</p>
       </div>
 
       <!-- Campus Security -->
-      <div class="active title">
+      <div class="title">
         <i class="dropdown icon"></i>
         <a class="{{isActiveRoute " Security_Thread"}} item" href="{{pathFor "Security_Thread"
         username=routeUserName}}">Campus Security</a>
       </div>
-      <div class="active content">
+      <div class="content">
         <p>Questions about campus security?</p>
         <p>Recent Posts:</p>
       </div>
 
       <!-- Commuting -->
-      <div class="active title">
+      <div class="title">
         <i class="dropdown icon"></i>
         <a class="{{isActiveRoute " Commute_Thread"}} item" href="{{pathFor "Commute_Thread"
         username=routeUserName}}">Commuting</a>
       </div>
-      <div class="active content">
+      <div class="content">
         <p>A thread about commuting to and from campus. Need directions about how to get somewhere? Drop your questions here!</p>
         <p>Recent Posts:</p>
       </div>
 
-
       <!-- Degree Programs -->
-      <div class="active title">
+      <div class="title">
         <i class="dropdown icon"></i>
         <a class="{{isActiveRoute "Degree_Thread"}} item" href="{{pathFor "Degree_Thread"
         username=routeUserName}}">Degree Programs</a>
       </div>
-      <div class="active content">
+      <div class="content">
         <p></p>
         <p>Recent Posts:</p>
       </div>
 
-
       <!-- Food Services -->
-      <div class="active title">
+      <div class="title">
         <i class="dropdown icon"></i>
         <a class="{{isActiveRoute " Food_Thread"}} item" href="{{pathFor "Food_Thread"
         username=routeUserName}}">Food Services</a>
       </div>
-      <div class="active content">
+      <div class="content">
         <p>Anything and everything food related on campus!</p>
         <p>Recent Posts:</p>
       </div>
@@ -113,6 +110,7 @@
         .accordion()
     ;
   </script>
+
 
   {{/if}}
 
