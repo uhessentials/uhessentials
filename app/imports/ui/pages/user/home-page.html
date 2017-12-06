@@ -2,14 +2,13 @@
 
   {{#if Template.subscriptionsReady}}
 
-  <div class="ui container" style="margin: 20px">
+  <div class="ui text container segment" style="margin: 20px">
 
     <div class="ui dividing header">
       Home
     </div>
 
     <div class="ui container">
-
       <div class="ui red segment">
         <h1>
         <a class="{{isActiveRoute "Degree_Thread"}} item" href="{{pathFor "Degree_Thread"
@@ -26,7 +25,7 @@
 
       <div class="ui green segment">
         <h1><a class="{{isActiveRoute " Events_Thread"}} item" href="{{pathFor "Events_Thread"
-        username=routeUserName}}">Events</a>
+        username=routeUserName}}">Campus Events</a>
         </h1>
       </div>
 
@@ -42,10 +41,44 @@
           <a class="{{isActiveRoute " Security_Thread"}} item" href="{{pathFor "Security_Thread"
           username=routeUserName}}">Security</a>
         </h1>
-
       </div>
 
     </div>
+
+    <div class="ui accordion">
+      <div class="active title">
+        <i class="dropdown icon"></i>
+        <a class="{{isActiveRoute " Events_Thread"}} item" href="{{pathFor "Events_Thread"
+        username=routeUserName}}">Campus Events</a>
+      </div>
+      <div class="active content">
+        <p>A thread about events going on around campus. This includes library and bookstore hours, campus events, gym hours, etc.</p>
+      </div>
+
+      <div class="title">
+        <i class="dropdown icon"></i>
+        What kinds of dogs are there?
+      </div>
+      <div class="content">
+        <p>There are many breeds of dogs. Each breed varies in size and temperament. Owners often select a breed of dog that they find to be compatible with their own lifestyle and desires from a companion.</p>
+      </div>
+
+      <div class="title">
+        <i class="dropdown icon"></i>
+        How do you acquire a dog?
+      </div>
+      <div class="content">
+        <p>Three common ways for a prospective owner to acquire a dog is from pet shops, private owners, or shelters.</p>
+        <p>A pet shop may be the most convenient way to buy a dog. Buying a dog from a private owner allows you to assess the pedigree and upbringing of your dog before choosing to take it home. Lastly, finding your dog from a shelter, helps give a good home to a dog who may not find one so readily.</p>
+      </div>
+    </div>
+
+
+
+
+
+
+
   </div>
 
   {{/if}}
