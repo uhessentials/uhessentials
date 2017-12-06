@@ -7,62 +7,204 @@
     <div class="ui dividing header">
       Home
     </div>
-    
+
     <div class="ui accordion">
 
       <!-- Campus Events -->
       <div class="title">
         <i class="dropdown icon"></i>
         <a class="{{isActiveRoute " Events_Thread"}} item" href="{{pathFor "Events_Thread"
-        username=routeUserName}}">Campus Events</a>
+        username=routeUserName}}">Campus Events</a><i class="announcement icon" style="margin-left: 10px"></i>
       </div>
       <div class="content">
         <p>A thread about events going on around campus. This includes library and bookstore hours, campus events, gym hours, etc.</p>
-        <p>Recent Posts:</p>
+        <!-- -->
+        <div class="ui small feed" style="margin-left: 50px">
+          <h4 class="ui header">Recently submitted topics:</h4>
+          <div class="event">
+            <div class="content">
+              <div class="summary">
+                <a>Sinclair Final Exam Hours?</a>
+              </div>
+            </div>
+          </div>
+          <div class="event">
+            <div class="content">
+              <div class="summary">
+                <a>Looking for an Aloha Bash ticket!!</a>
+              </div>
+            </div>
+          </div>
+          <div class="event">
+            <div class="content">
+              <div class="summary">
+                <a>Anyone going to the game tonight?</a>
+              </div>
+            </div>
+          </div>
+          <div class="event">
+            <div class="content">
+              <div class="summary">
+                <a>Engineering Career Fair</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- Campus Security -->
       <div class="title">
         <i class="dropdown icon"></i>
         <a class="{{isActiveRoute " Security_Thread"}} item" href="{{pathFor "Security_Thread"
-        username=routeUserName}}">Campus Security</a>
+        username=routeUserName}}">Campus Security</a><i class="protect icon" style="margin-left: 10px"></i>
       </div>
       <div class="content">
         <p>Questions about campus security?</p>
-        <p>Recent Posts:</p>
+
+        <div class="ui small feed" style="margin-left: 50px">
+          <h4 class="ui header">Recently submitted topics:</h4>
+          <div class="event">
+            <div class="content">
+              <div class="summary">
+                <a>Where is the security office located?</a>
+              </div>
+            </div>
+          </div>
+          <div class="event">
+            <div class="content">
+              <div class="summary">
+                <a>Is there security on campus 24/7?</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- Commuting -->
       <div class="title">
         <i class="dropdown icon"></i>
         <a class="{{isActiveRoute " Commute_Thread"}} item" href="{{pathFor "Commute_Thread"
-        username=routeUserName}}">Commuting</a>
+        username=routeUserName}}">Commuting</a><i class="road icon" style="margin-left: 10px"></i>
       </div>
       <div class="content">
         <p>A thread about commuting to and from campus. Need directions about how to get somewhere? Drop your questions here!</p>
-        <p>Recent Posts:</p>
+
+        <div class="ui small feed" style="margin-left: 50px">
+          <h4 class="ui header">Recently submitted topics:</h4>
+          <div class="event">
+            <div class="content">
+              <div class="summary">
+                <a>Fastest bus route here from Kaneohe</a>
+              </div>
+            </div>
+          </div>
+          <div class="event">
+            <div class="content">
+              <div class="summary">
+                <a>Where can I get a new U-Pass?</a>
+              </div>
+            </div>
+          </div>
+          <div class="event">
+            <div class="content">
+              <div class="summary">
+                <a>Selling a carpool pass!</a>
+              </div>
+            </div>
+          </div>
+          <div class="event">
+            <div class="content">
+              <div class="summary">
+                <a>Parking at the structure cost?</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- Degree Programs -->
       <div class="title">
         <i class="dropdown icon"></i>
         <a class="{{isActiveRoute "Degree_Thread"}} item" href="{{pathFor "Degree_Thread"
-        username=routeUserName}}">Degree Programs</a>
+        username=routeUserName}}">Degree Programs</a><i class="student icon" style="margin-left: 10px"></i>
       </div>
       <div class="content">
-        <p></p>
-        <p>Recent Posts:</p>
+        <p>[INSERT DESCRIPTION HERE!]</p>
+
+        <div class="ui small feed" style="margin-left: 50px">
+          <h4 class="ui header">Recently submitted topics:</h4>
+          <div class="event">
+            <div class="content">
+              <div class="summary">
+                <a>Difference between a minor and major</a>
+              </div>
+            </div>
+          </div>
+          <div class="event">
+            <div class="content">
+              <div class="summary">
+                <a>Summer registration</a>
+              </div>
+            </div>
+          </div>
+          <div class="event">
+            <div class="content">
+              <div class="summary">
+                <a>Considering a minor, but not sure what.</a>
+              </div>
+            </div>
+          </div>
+          <div class="event">
+            <div class="content">
+              <div class="summary">
+                <a>Easy 300+ WI</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
 
       <!-- Food Services -->
       <div class="title">
         <i class="dropdown icon"></i>
         <a class="{{isActiveRoute " Food_Thread"}} item" href="{{pathFor "Food_Thread"
-        username=routeUserName}}">Food Services</a>
+        username=routeUserName}}">Food Services</a><i class="food icon" style="margin-left: 10px"></i>
       </div>
       <div class="content">
         <p>Anything and everything food related on campus!</p>
-        <p>Recent Posts:</p>
+
+        <div class="ui small feed" style="margin-left: 50px">
+          <h4 class="ui header">Recently submitted topics:</h4>
+          <div class="event">
+            <div class="content">
+              <div class="summary">
+                <a>Where are the food trucks on campus?</a>
+              </div>
+            </div>
+          </div>
+          <div class="event">
+            <div class="content">
+              <div class="summary">
+                <a>Dunkin' Donuts at Paradise Palms</a>
+              </div>
+            </div>
+          </div>
+          <div class="event">
+            <div class="content">
+              <div class="summary">
+                <a>Pizza Hut or Dominos</a>
+              </div>
+            </div>
+          </div>
+          <div class="event">
+            <div class="content">
+              <div class="summary">
+                <a>Dessert places on campus?</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
     </div>
