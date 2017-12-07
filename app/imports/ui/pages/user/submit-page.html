@@ -13,26 +13,29 @@
       <p>1. Be nice.</p>
       <p>2. No swearing.</p>
       <p>3. No inappropriate content.</p>
+
+      <div class="field">
+        <div class="ui checkbox">
+          <input type="checkbox" tabindex="0" class="hidden">
+          <label>I agree to the Terms and Conditions</label>
+        </div>
+      </div>
     </div>
 
     <div class="ui divider"></div>
 
     <form class="ui equal width form submit-data-form {{ successClass }} {{ errorClass }}">
 
-<<<<<<< HEAD
+
         {{> Text_Form_Control label="Title" placeholder="Title/Subject" value=profile.firstName errorMessage=(fieldError "firstName")}}
 
         {{> TextArea_Form_Control label="Information/Question" placeholder="Title/Subject" value=profile.firstName errorMessage=(fieldError "firstName")}}
-=======
+
       <div class="field">
         {{> Text_Form_Control label="Title" placeholder="Subject" value=submit.title errorMessage=(fieldError
         "title")}}
       </div>
 
-      <!-- div class="field">
-        <label>Title</label>
-        <input type="text" name="title" placeholder="Subject">
-      </div -->
 
       <div class="field">
         <label>Thread</label>
@@ -45,7 +48,6 @@
           <option value="Campus Services">Campus Services</option>
         </select>
       </div>
->>>>>>> master
 
       <!-- div class="field">
         {{> Select_Form_Control label="Thread" placeholder="Select Thread..." options=threadName
@@ -58,17 +60,8 @@
         errorMessage=(fieldError "info")}}
       </div>
 
-      <!-- div class="field">
-        <label>Information/Question</label>
-        <textarea></textarea>
-      </div -->
 
-      <div class="field">
-        <div class="ui checkbox">
-          <input type="checkbox" tabindex="0" class="hidden">
-          <label>I agree to the Terms and Conditions</label>
-        </div>
-      </div>
+
 
       <div class="fields">
         <button class="ui primary button" type="submit">Submit</button>
