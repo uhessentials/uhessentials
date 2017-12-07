@@ -2,51 +2,222 @@
 
   {{#if Template.subscriptionsReady}}
 
-  <div class="ui container" style="margin: 20px">
+  <div class="ui text container segment" style="margin: 20px">
 
     <div class="ui dividing header">
-      Home
+      <h1>Home</h1>
     </div>
 
-    <div class="ui container">
+    <div class="ui accordion">
 
-      <div class="ui red segment">
-        <h1>
-        <a class="{{isActiveRoute " Degree_Thread"}} item" href="{{pathFor "Degree_Thread"
-        username=routeUserName}}">Degree</a>
-        </h1>
+      <!-- Campus Events -->
+      <div class="title">
+        <i class="dropdown icon"></i>
+        <a class="{{isActiveRoute " Events_Thread"}} item" href="{{pathFor "Events_Thread"
+        username=routeUserName}}">Campus Events</a><i class="annoucement icon" style="margin-left: 10px"></i>
+      </div>
+      <div class="content thread description">
+        <p>A thread about events going on around campus. This includes library and bookstore hours, campus events, gym hours, etc.</p>
+        <!-- -->
+        <div class="ui small feed">
+          <h4 class="ui header">Recently submitted topics:</h4>
+          <div class="event">
+            <div class="content">
+              <div class="summary">
+                <a>Sinclair Final Exam Hours?</a>
+              </div>
+            </div>
+          </div>
+          <div class="event">
+            <div class="content">
+              <div class="summary">
+                <a>Looking for an Aloha Bash ticket!!</a>
+              </div>
+            </div>
+          </div>
+          <div class="event">
+            <div class="content">
+              <div class="summary">
+                <a>Anyone going to the game tonight?</a>
+              </div>
+            </div>
+          </div>
+          <div class="event">
+            <div class="content">
+              <div class="summary">
+                <a>Engineering Career Fair</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="ui orange segment">
-        <h1>
-          <a class="{{isActiveRoute " Commute_Thread"}} item" href="{{pathFor "Commute_Thread"
-          username=routeUserName}}">Commute</a>
-        </h1>
+      <!-- Campus Security -->
+      <div class="title">
+        <i class="dropdown icon"></i>
+        <a class="{{isActiveRoute " Security_Thread"}} item" href="{{pathFor "Security_Thread"
+        username=routeUserName}}">Campus Security</a>
+        <i class="protect icon" style="margin-left: 10px"></i>
+      </div>
+      <div class="content thread description">
+        <p>Questions about campus security?</p>
+
+        <div class="ui small feed">
+          <h4 class="ui header">Recently submitted topics:</h4>
+          <div class="event">
+            <div class="content">
+              <div class="summary">
+                <a>Where is the security office located?</a>
+              </div>
+            </div>
+          </div>
+          <div class="event">
+            <div class="content">
+              <div class="summary">
+                <a>Is there security on campus 24/7?</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="ui green segment">
-        <h1><a class="{{isActiveRoute " Events_Thread"}} item" href="{{pathFor "Events_Thread"
-        username=routeUserName}}">Events</a>
-        </h1>
+      <!-- Commuting -->
+      <div class="title">
+        <i class="dropdown icon"></i>
+        <a class="{{isActiveRoute " Commute_Thread"}} item" href="{{pathFor "Commute_Thread"
+        username=routeUserName}}">Commuting</a><i class="road icon" style="margin-left: 10px"></i>
+      </div>
+      <div class="content thread description">
+        <p>A thread about commuting to and from campus. Need directions about how to get somewhere? Drop your questions here!</p>
+
+        <div class="ui small feed">
+          <h4 class="ui header">Recently submitted topics:</h4>
+          <div class="event">
+            <div class="content">
+              <div class="summary">
+                <a>Fastest bus route here from Kaneohe</a>
+              </div>
+            </div>
+          </div>
+          <div class="event">
+            <div class="content">
+              <div class="summary">
+                <a>Where can I get a new U-Pass?</a>
+              </div>
+            </div>
+          </div>
+          <div class="event">
+            <div class="content">
+              <div class="summary">
+                <a>Selling a carpool pass!</a>
+              </div>
+            </div>
+          </div>
+          <div class="event">
+            <div class="content">
+              <div class="summary">
+                <a>Parking at the structure cost?</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="ui blue segment">
-        <h1>
+      <!-- Degree Programs -->
+      <div class="title">
+        <i class="dropdown icon"></i>
+        <a class="{{isActiveRoute "Degree_Thread"}} item" href="{{pathFor "Degree_Thread"
+        username=routeUserName}}">Degree Programs</a><i class="student icon" style="margin-left: 10px"></i>
+      </div>
+      <div class="content thread description">
+        <p>This thread contains questions regarding university degrees, majors, minors, classes, registration, etc.</p>
+
+        <div class="ui small feed">
+          <h4 class="ui header">Recently submitted topics:</h4>
+          <div class="event">
+            <div class="content">
+              <div class="summary">
+                <a>Difference between a minor and major</a>
+              </div>
+            </div>
+          </div>
+          <div class="event">
+            <div class="content">
+              <div class="summary">
+                <a>Summer registration</a>
+              </div>
+            </div>
+          </div>
+          <div class="event">
+            <div class="content">
+              <div class="summary">
+                <a>Considering a minor, but not sure what.</a>
+              </div>
+            </div>
+          </div>
+          <div class="event">
+            <div class="content">
+              <div class="summary">
+                <a>Easy 300+ WI</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Food Services -->
+      <div class="title">
+        <i class="dropdown icon"></i>
         <a class="{{isActiveRoute " Food_Thread"}} item" href="{{pathFor "Food_Thread"
-        username=routeUserName}}">Food</a>
-        </h1>
+        username=routeUserName}}">Food Services</a><i class="food icon" style="margin-left: 10px"></i>
       </div>
+      <div class="content thread description">
+        <p>Anything and everything food related on campus!</p>
 
-      <div class="ui purple segment">
-        <h1>
-          <a class="{{isActiveRoute " Security_Thread"}} item" href="{{pathFor "Security_Thread"
-          username=routeUserName}}">Security</a>
-        </h1>
-
+        <div class="ui small feed">
+          <h4 class="ui header">Recently submitted topics:</h4>
+          <div class="event">
+            <div class="content">
+              <div class="summary">
+                <a>Where are the food trucks on campus?</a>
+              </div>
+            </div>
+          </div>
+          <div class="event">
+            <div class="content">
+              <div class="summary">
+                <a>Dunkin' Donuts at Paradise Palms</a>
+              </div>
+            </div>
+          </div>
+          <div class="event">
+            <div class="content">
+              <div class="summary">
+                <a>Pizza Hut or Dominos</a>
+              </div>
+            </div>
+          </div>
+          <div class="event">
+            <div class="content">
+              <div class="summary">
+                <a>Dessert places on campus?</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
     </div>
+
   </div>
+
+  <script>
+    $('.ui.accordion')
+        .accordion()
+    ;
+  </script>
+
 
   {{/if}}
 

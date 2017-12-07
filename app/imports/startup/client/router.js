@@ -33,7 +33,6 @@ FlowRouter.route('/directory', {
   triggersExit: [removeDirectoryBodyClass],
 });
 
-
 /*                        USER ROUTES                      */
 
 

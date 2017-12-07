@@ -1,16 +1,18 @@
 <template name="Food_Thread">
 
-  <div class="ui container">
+  <div class="ui container" style="margin: 20px">
 
+    <div class="ui centered dividing header">
+      <div class="ui huge header">Food Services</div>
+    </div>
 
     <div class="submit-button">
       <div class="item">
-        <button class="huge fluid ui green button">
-          Submit New Topic
-        </button>
+          <a class="{{isActiveRoute "Submit_Page"}} item" href="{{pathFor "Submit_Page" username=routeUserName}}">
+            <button class="huge fluid ui green button">Submit New Topic</button>
+          </a>
       </div>
     </div>
-
 
     <div class="topic">
       <div class="item">
@@ -265,37 +267,6 @@
             </div>
           </div>
 
-        </div>
-      </div>
-    </div>
-
-
-    <div class="pages">
-      <div class="item">
-        <div class="ui centered grid container">
-          <div class="ui pagination menu">
-            <a class="item">
-              Prev
-            </a>
-            <div class="item">
-              ...
-            </div>
-            <a class="item">
-              19
-            </a>
-            <a class="item">
-              20
-            </a>
-            <a class="item">
-              21
-            </a>
-            <div class="item">
-              ...
-            </div>
-            <a class="item">
-              Next
-            </a>
-          </div>
         </div>
       </div>
     </div>
