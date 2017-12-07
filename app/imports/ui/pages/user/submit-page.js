@@ -30,20 +30,20 @@ Template.Submit_Page.helpers({
   },
 });
 
-
-Template.Submit_Page.events({
+Template.Submit.events({
   'submit .submit-data-form'(event, instance) {
     event.preventDefault();
-    const title = event.target.Title.value;
+    const subject = event.target.Subject.value;
     const username = FlowRouter.getParam('username'); // schema requires username.
+    const thread = event.target.Thread.value;
     const info = event.target.Info.value;
 
-    const updatedSubmitData = { title, username, info };
+    const updatedTopicData = { username, subject, thread, info };
 
     // Clear out any old validation errors.
     instance.context.reset();
     // Invoke clean so that updatedProfileData reflects what will be inserted.
-    const cleanData = Profiles.getSchema().clean(updatedSubmitData);
+    const cleanData = Profiles.getSchema().clean(updatedTopicData);
     // Determine validity.
     instance.context.validate(cleanData);
 

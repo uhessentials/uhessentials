@@ -26,26 +26,20 @@
 
     <form class="ui equal width form submit-data-form {{ successClass }} {{ errorClass }}">
 
-
-        {{> Text_Form_Control label="Title" placeholder="Title/Subject" value=profile.firstName errorMessage=(fieldError "firstName")}}
-
-        {{> TextArea_Form_Control label="Information/Question" placeholder="Title/Subject" value=profile.firstName errorMessage=(fieldError "firstName")}}
-
       <div class="field">
-        {{> Text_Form_Control label="Title" placeholder="Subject" value=submit.title errorMessage=(fieldError
-        "title")}}
+        {{> Text_Form_Control label="Subject" placeholder="Sinclair Hours" value=submit.subject
+        errorMessage=(fieldError "subject")}}
       </div>
-
 
       <div class="field">
         <label>Thread</label>
         <select class="ui fluid dropdown" name="Thread">
           <option value="">Select Thread...</option>
-          <option value="Degree Programs">Degree Programs</option>
-          <option value="Food Services">Food Services</option>
-          <option value="Commuting">Commuting</option>
-          <option value="Campus Security">Campus Security</option>
-          <option value="Campus Services">Campus Services</option>
+          <option value="degree-programs">Degree Programs</option>
+          <option value="food-services">Food Services</option>
+          <option value="commuting">Commuting</option>
+          <option value="campus-security">Campus Security</option>
+          <option value="campus-events">Campus Services</option>
         </select>
       </div>
 
@@ -54,14 +48,9 @@
         errorMessage=(fieldError "threadName") multiple=false }}
       </div -->
 
-
       <div class="field">
-        {{> TextArea_Form_Control label="Information/Question" placeholder="" value=submit.info
-        errorMessage=(fieldError "info")}}
+        {{> TextArea_Form_Control label="Info/Question" placeholder="What time does Sinclair open?" value=submit.info errorMessage=(fieldError "info")}}
       </div>
-
-
-
 
       <div class="fields">
         <button class="ui primary button" type="submit">Submit</button>
