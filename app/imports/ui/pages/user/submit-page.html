@@ -26,7 +26,7 @@
 
     <div class="ui divider"></div>
 
-    <form class="ui equal width form submit-data-form {{ successClass }} {{ errorClass }}">
+    <form class="ui equal width form submit-data-form {{ errorClass }}">
 
       <div class="field">
         {{> Text_Form_Control label="Subject" placeholder="Sinclair Hours" value=submit.subject
@@ -47,22 +47,16 @@
 
       <div class="field">
         {{> Select_Form_Control label="Thread" placeholder="Select Thread..." options=thread
-        errorMessage=(fieldError "thread") multiple=false }}
+        errorMessage=(fieldError "thread")}}
       </div>
 
       <div class="field">
-        {{> TextArea_Form_Control label="Info/Question" placeholder="What time does Sinclair open?" value=submit.info
+        {{> TextArea_Form_Control label="Info/Question" placeholder="What time does Sinclair close?" value=submit.info
         errorMessage=(fieldError "info")}}
       </div>
 
-      <div class="fields">
-        <button class="ui primary button" type="submit">Submit</button>
-        {{#if displaySuccessMessage}}
-        <div class="ui success message">
-          <p>Content submitted.</p>
-        </div>
-        {{/if}}
-      </div>
+
+      <button class="ui primary button" type="submit">Submit</button>
 
     </form>
 

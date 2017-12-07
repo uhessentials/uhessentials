@@ -30,7 +30,7 @@ class PostCollection extends BaseCollection {
    * Profiles.define({ username: 'aaibala',
    *                   subject: 'Sinclair Library',
    *                   threads: 'Campus Events',
-   *                   info: 'What time does Sinclair open?',
+   *                   info: 'What time does Sinclair close?',
    * @param { Object } description Object with required key username.
    * Remaining keys are optional.
    * Username must be unique for all users. It should be the UH email account.
