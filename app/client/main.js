@@ -14,5 +14,8 @@ import '/imports/ui/pages/user';
 import '/imports/ui/stylesheets/style.css';
 import '/imports/api/base';
 import '/imports/api/profile';
+<<<<<<< HEAD
 import '/imports/api/post';
+=======
+>>>>>>> master
 import '/imports/api/thread';

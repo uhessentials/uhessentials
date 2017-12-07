@@ -33,6 +33,7 @@
         errorMessage=(fieldError "subject")}}
       </div>
 
+<<<<<<< HEAD
       <!-- div class="field">
         <label>Thread</label>
         <select class="ui fluid dropdown" name="Thread">
@@ -44,6 +45,11 @@
           <option value="campus-events">Campus Services</option>
         </select>
       </div -->
+=======
+      <div class="field">
+        {{> Select_Form_Control label="Thread" options=threads errorMessage=(fieldError "threads") multiple=true }}
+      </div>
+>>>>>>> master
 
       <div class="field">
         {{> Select_Form_Control label="Thread" placeholder="Select Thread..." options=thread

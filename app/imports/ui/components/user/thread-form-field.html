@@ -1,0 +1,13 @@
+<template name="Threads_Form_Field">
+  <div class="{{#if required}}required{{/if}} field">
+    <label>Thread(s)</label>
+    <select single="" class="ui dropdown" name="threads">
+      <option value="">Select Thread(s)</option>
+      <option value="events">Campus Events</option>
+      <option value="security">Campus Security</option>
+      <option value="commuting">Commuting</option>
+      <option value="degree">Degree Programs</option>
+      <option value="food">Food Services</option>
+    </select>
+  </div>
+</template>

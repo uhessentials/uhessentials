@@ -1,6 +1,32 @@
 {
   "comment": "Initial contents for the UH Essentials database. For development purposes only.",
   "collections": [
+
+    {
+      "name": "ThreadCollection",
+      "contents": [
+        {
+          "name": "Campus Events",
+          "description": ""
+        },
+        {
+          "name": "Campus Security",
+          "description": ""
+        },
+        {
+          "name": "Commuting",
+          "description": ""
+        },
+        {
+          "name": "Degree Programs",
+          "description": ""
+        },
+        {
+          "name": "Food Services",
+          "description": ""
+        }
+      ]
+    },
     {
       "name": "ThreadCollection",
       "contents": [
