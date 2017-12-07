@@ -22,7 +22,7 @@ class ProfileCollection extends BaseCollection {
       username: { type: String },
       firstName: { type: String, optional: true },
       lastName: { type: String, optional: true },
-      title: { type: String, optional: true },
+      standing: { type: String, optional: true },
       campuses: { type: String, optional: true },
       'campuses.$': { type: String },
       picture: { type: SimpleSchema.RegEx.Url, optional: true },
@@ -36,7 +36,7 @@ class ProfileCollection extends BaseCollection {
    * Profiles.define({ firstName: 'April',
    *                   lastName: 'Bala',
    *                   username: 'aaibala',
-   *                   title: 'Student',
+   *                   standing: 'Student',
    *                   campus: 'University of Hawaii at Manoa',
    *                   picture: '',
    *                   bio: 'I am a student at UH Manoa.',
@@ -46,17 +46,17 @@ class ProfileCollection extends BaseCollection {
    * @throws { Meteor.Error } If a user with the supplied username already exists.
    * @returns The newly created docID.
    */
-  define({ firstName = '', lastName = '', username, title = '', campuses = [], gender = '', picture = '', bio = '' }) {
+  define({ firstName = '', lastName = '', username, standing = '', campuses = [], gender = '', picture = '', bio = '' }) {
     // make sure required fields are OK.
     const checkPattern = {
       firstName: String,
       lastName: String,
       username: String,
-      title: String,
+      standing: String,
       picture: String,
       bio: String,
     };
-    check({ firstName, lastName, username, title, picture, bio }, checkPattern);
+    check({ firstName, lastName, username, standing, picture, bio }, checkPattern);
 
     if (this.find({ username }).count() > 0) {
       throw new Meteor.Error(`${username} is previously defined in another Profile`);
@@ -65,7 +65,7 @@ class ProfileCollection extends BaseCollection {
     // Throw an error if any of the passed Interest names are not defined.
     Campuses.assertNames(campuses);
 
-    return this._collection.insert({ firstName, lastName, username, title, campuses, gender, picture, bio });
+    return this._collection.insert({ firstName, lastName, username, standing, campuses, gender, picture, bio });
   }
 
   /**
@@ -78,12 +78,12 @@ class ProfileCollection extends BaseCollection {
     const firstName = doc.firstName;
     const lastName = doc.lastName;
     const username = doc.username;
-    const title = doc.title;
+    const standing = doc.standing;
     const campuses = doc.campuses;
     const picture = doc.picture;
     const bio = doc.bio;
 
-    return { firstName, lastName, username, title, campuses, picture, bio };
+    return { firstName, lastName, username, standing, campuses, picture, bio };
   }
 }
 
