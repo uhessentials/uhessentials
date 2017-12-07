@@ -15,24 +15,9 @@
         "lastName")}}
       </div>
 
-      <div class="field" value=profile.gender>
-        <label>Gender</label>
-        <select class="ui dropdown" name="Gender">
-          <option value="">Select One...</option>
-          <option value="Female">Female</option>
-          <option value="Male">Male</option>
-          <option value="Other">Other</option>
-        </select>
-      </div>
-
-      <div class="field" value=profile.standing>
-        <label>Standing</label>
-        <select class="ui dropdown" name="Standing">
-          <option default value="">Select One...</option>
-          <option value="Student">Student</option>
-          <option value="Professor">Professor</option>
-          <option value="Faculty/Staff">Faculty/Staff</option>
-        </select>
+      <div class="field">
+        {{> Text_Form_Control label="Title" placeholder="CHEM Professor" value=profile.title errorMessage=(fieldError
+        "title")}}
       </div>
 
       <div class="field" value=profile.campus>
@@ -66,12 +51,6 @@
       {{> TextArea_Form_Control label="Bio" value=profile.bio placeholder="Short bio statement here"
       errorMessage=(fieldError "bio")}}
 
-      <div class="field">
-        <div class="ui checkbox">
-          <input type="checkbox" tabindex="0" class="hidden">
-          <label>I agree to the Terms and Conditions</label>
-        </div>
-      </div>
 
       <button class="ui primary button" type="submit">Submit</button>
       {{#if displaySuccessMessage}}
