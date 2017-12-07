@@ -2,6 +2,31 @@
   "comment": "Initial contents for the UH Essentials database. For development purposes only.",
   "collections": [
     {
+      "name": "ThreadCollection",
+      "contents": [
+        {
+          "name": "Campus Events",
+          "description": "A thread about events going on around campus. This includes library and bookstore hours, campus events, gym hours, etc."
+        },
+        {
+          "name": "Campus Security",
+          "description": "Questions about campus security?"
+        },
+        {
+          "name": "Commuting",
+          "description": "A thread about commuting to and from campus. Need directions about how to get somewhere? Drop your questions here!"
+        },
+        {
+          "name": "Degree Programs",
+          "description": "This thread contains questions regarding university degrees, majors, minors, classes, registration, etc."
+        },
+        {
+          "name": "Food Services",
+          "description": "Anything and everything food related on campus!"
+        }
+      ]
+    },
+    {
       "name": "ProfileCollection",
       "contents": [
         {

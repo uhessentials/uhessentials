@@ -2,13 +2,17 @@ import { Template } from 'meteor/templating';
 import { ReactiveDict } from 'meteor/reactive-dict';
 import { FlowRouter } from 'meteor/kadira:flow-router';
 import { _ } from 'meteor/underscore';
+import { Profiles } from '/imports/api/profile/ProfileCollection';
 import { Posts } from '/imports/api/post/PostCollection';
+import { Threads } from '/imports/api/thread/ThreadCollection';
 
 const displaySuccessMessage = 'displaySuccessMessage';
 const displayErrorMessages = 'displayErrorMessages';
 
 Template.Submit_Page.onCreated(function onCreated() {
+  this.subscribe(Profiles.getPublicationName());
   this.subscribe(Posts.getPublicationName());
+  this.subscribe(Threads.getPublicationName());
   this.messageFlags = new ReactiveDict();
   this.messageFlags.set(displaySuccessMessage, false);
   this.messageFlags.set(displayErrorMessages, false);
@@ -25,6 +29,20 @@ Template.Submit_Page.helpers({
   errorClass() {
     return Template.instance().messageFlags.get(displayErrorMessages) ? 'error' : '';
   },
+  profile() {
+    return Profiles.findDoc(FlowRouter.getParam('username'));
+  },
+  threads() {
+    const profile = Profiles.findDoc(FlowRouter.getParam('username'));
+    const selectedThreads = profile.threads;
+    return profile && _.map(Threads.findAll(),
+        function makeThreadObject(thread) {
+          return { label: thread.name, selected: _.contains(selectedThreads, thread.name) };
+        });
+  },
+  routeUserName() {
+    return FlowRouter.getParam('username');
+  },
 });
 
 Template.Submit.events({
@@ -32,15 +50,16 @@ Template.Submit.events({
     event.preventDefault();
     const subject = event.target.Subject.value;
     const username = FlowRouter.getParam('username'); // schema requires username.
-    const thread = event.target.Thread.value;
     const info = event.target.Info.value;
+    const selectedThreads = _.filter(event.target.Threads.selectedOptions, (option) => option.selected);
+    const threads = _.map(selectedThreads, (option) => option.value);
 
-    const updatedTopicData = { username, subject, thread, info };
+    const updatedPostData = { username, subject, threads, info };
 
     // Clear out any old validation errors.
     instance.context.reset();
     // Invoke clean so that updatedProfileData reflects what will be inserted.
-    const cleanData = Posts.getSchema().clean(updatedTopicData);
+    const cleanData = Posts.getSchema().clean(updatedPostData);
     // Determine validity.
     instance.context.validate(cleanData);
 
