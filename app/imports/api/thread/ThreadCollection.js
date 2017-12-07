@@ -8,11 +8,7 @@ import { Tracker } from 'meteor/tracker';
 /** @module Thread */
 
 /**
-<<<<<<< HEAD
  * Represents a specific thread, such as "Campus Events".
-=======
- * Represents a specific Thread, such as "Software Engineering".
->>>>>>> master
  * @extends module:Base~BaseCollection
  */
 class ThreadCollection extends BaseCollection {
@@ -37,15 +33,7 @@ class ThreadCollection extends BaseCollection {
    * @param { Object } description Object with keys name and description.
    * Name must be previously undefined. Description is optional.
    * Creates a "slug" for this name and stores it in the slug field.
-   * @throws {Meteor.Error} If the interest definition includes a defined name.
-=======
-   * Threads.define({ name: 'Software Engineering',
-   *                    description: 'Methods for group development of large, high quality software systems' });
-   * @param { Object } description Object with keys name and description.
-   * Name must be previously undefined. Description is optional.
-   * Creates a "slug" for this name and stores it in the slug field.
-   * @throws {Meteor.Error} If the Thread definition includes a defined name.
->>>>>>> master
+   * @throws {Meteor.Error} If the thread definition includes a defined name.
    * @returns The newly created docID.
    */
   define({ name, description }) {
@@ -58,7 +46,6 @@ class ThreadCollection extends BaseCollection {
   }
 
   /**
-<<<<<<< HEAD
    * Returns the Thread name corresponding to the passed thread docID.
    * @param threadID An thread docID.
    * @returns { String } A thread name.
@@ -67,35 +54,16 @@ class ThreadCollection extends BaseCollection {
   findName(threadID) {
     this.assertDefined(threadID);
     return this.findDoc(threadID).name;
-=======
-   * Returns the Thread name corresponding to the passed Thread docID.
-   * @param ThreadID An Thread docID.
-   * @returns { String } An Thread name.
-   * @throws { Meteor.Error} If the Thread docID cannot be found.
-   */
-  findName(ThreadID) {
-    this.assertDefined(ThreadID);
-    return this.findDoc(ThreadID).name;
->>>>>>> master
   }
 
   /**
    * Returns a list of Thread names corresponding to the passed list of Thread docIDs.
-<<<<<<< HEAD
    * @param interestIDs A list of Thread docIDs.
    * @returns { Array }
    * @throws { Meteor.Error} If any of the instanceIDs cannot be found.
    */
   findNames(threadIDs) {
     return threadIDs.map(threadID => this.findName(threadID));
-=======
-   * @param ThreadIDs A list of Thread docIDs.
-   * @returns { Array }
-   * @throws { Meteor.Error} If any of the instanceIDs cannot be found.
-   */
-  findNames(ThreadIDs) {
-    return ThreadIDs.map(ThreadID => this.findName(ThreadID));
->>>>>>> master
   }
 
   /**
@@ -120,11 +88,7 @@ class ThreadCollection extends BaseCollection {
 
   /**
    * Returns the docID associated with the passed Thread name, or throws an error if it cannot be found.
-<<<<<<< HEAD
    * @param { String } name An thread name.
-=======
-   * @param { String } name An Thread name.
->>>>>>> master
    * @returns { String } The docID associated with the name.
    * @throws { Meteor.Error } If name is not associated with an Thread.
    */
@@ -135,11 +99,7 @@ class ThreadCollection extends BaseCollection {
   /**
    * Returns the docIDs associated with the array of Thread names, or throws an error if any name cannot be found.
    * If nothing is passed, then an empty array is returned.
-<<<<<<< HEAD
    * @param { String[] } names An array of thread names.
-=======
-   * @param { String[] } names An array of Thread names.
->>>>>>> master
    * @returns { String[] } The docIDs associated with the names.
    * @throws { Meteor.Error } If any instance is not an Thread name.
    */
