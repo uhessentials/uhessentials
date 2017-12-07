@@ -24,38 +24,14 @@
         "title")}}
       </div>
 
-      <!-- div class="field">
-        <label>Title</label>
-        <input type="text" name="title" placeholder="Subject">
-      </div -->
-
       <div class="field">
-        <label>Thread</label>
-        <select class="ui fluid dropdown" name="Thread">
-          <option value="">Select Thread...</option>
-          <option value="Degree Programs">Degree Programs</option>
-          <option value="Food Services">Food Services</option>
-          <option value="Commuting">Commuting</option>
-          <option value="Campus Security">Campus Security</option>
-          <option value="Campus Services">Campus Services</option>
-        </select>
+        {{> Select_Form_Control label="Thread" options=threads errorMessage=(fieldError "threads") multiple=true }}
       </div>
-
-      <!-- div class="field">
-        {{> Select_Form_Control label="Thread" placeholder="Select Thread..." options=threadName
-        errorMessage=(fieldError "threadName") multiple=false }}
-      </div -->
-
 
       <div class="field">
         {{> TextArea_Form_Control label="Information/Question" placeholder="" value=submit.info
         errorMessage=(fieldError "info")}}
       </div>
-
-      <!-- div class="field">
-        <label>Information/Question</label>
-        <textarea></textarea>
-      </div -->
 
       <div class="field">
         <div class="ui checkbox">
