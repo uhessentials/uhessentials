@@ -11,10 +11,10 @@ import { Tracker } from 'meteor/tracker';
 class PostCollection extends BaseCollection {
 
   /**
-   * Creates the Profile collection.
+   * Creates the Post collection.
    */
   constructor() {
-    super('Profile', new SimpleSchema({
+    super('Post', new SimpleSchema({
       username: { type: String },
       subject: { type: String, optional: true },
       thread: { type: String, optional: true },
@@ -23,12 +23,12 @@ class PostCollection extends BaseCollection {
   }
 
   /**
-   * Defines a new Profile.
+   * Defines a new Post.
    * @example
    * Profiles.define({ username: 'aaibala',
    *                   subject: 'Sinclair Library',
    *                   thread: 'Campus Events',
-   *                   info: 'Is Sinclair open late tonight? I need a place to study.',
+   *                   info: 'What time does Sinclair open?',
    * @param { Object } description Object with required key username.
    * Remaining keys are optional.
    * Username must be unique for all users. It should be the UH email account.

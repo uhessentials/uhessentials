@@ -2,17 +2,17 @@ import { Template } from 'meteor/templating';
 import { ReactiveDict } from 'meteor/reactive-dict';
 import { FlowRouter } from 'meteor/kadira:flow-router';
 import { _ } from 'meteor/underscore';
-import { Profiles } from '/imports/api/profile/ProfileCollection';
+import { Posts } from '/imports/api/post/PostCollection';
 
 const displaySuccessMessage = 'displaySuccessMessage';
 const displayErrorMessages = 'displayErrorMessages';
 
 Template.Submit_Page.onCreated(function onCreated() {
-  this.subscribe(Profiles.getPublicationName());
+  this.subscribe(Posts.getPublicationName());
   this.messageFlags = new ReactiveDict();
   this.messageFlags.set(displaySuccessMessage, false);
   this.messageFlags.set(displayErrorMessages, false);
-  this.context = Profiles.getSchema().namedContext('Submit_Page');
+  this.context = Posts.getSchema().namedContext('Submit_Page');
 });
 
 Template.Submit_Page.helpers({
@@ -24,9 +24,6 @@ Template.Submit_Page.helpers({
   },
   errorClass() {
     return Template.instance().messageFlags.get(displayErrorMessages) ? 'error' : '';
-  },
-  profile() {
-    return Profiles.findDoc(FlowRouter.getParam('username'));
   },
 });
 
@@ -43,13 +40,13 @@ Template.Submit.events({
     // Clear out any old validation errors.
     instance.context.reset();
     // Invoke clean so that updatedProfileData reflects what will be inserted.
-    const cleanData = Profiles.getSchema().clean(updatedTopicData);
+    const cleanData = Posts.getSchema().clean(updatedTopicData);
     // Determine validity.
     instance.context.validate(cleanData);
 
     if (instance.context.isValid()) {
-      const docID = Profiles.findDoc(FlowRouter.getParam('username'))._id;
-      const id = Profiles.update(docID, { $set: cleanData });
+      const docID = Posts.findDoc(FlowRouter.getParam('username'))._id;
+      const id = Posts.update(docID, { $set: cleanData });
       instance.messageFlags.set(displaySuccessMessage, id);
       instance.messageFlags.set(displayErrorMessages, false);
     } else {

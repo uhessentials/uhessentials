@@ -4,20 +4,22 @@
 
   <div class="ui text container segment">
 
-    <div class="ui dividing header">
-      <h1>Submit Information/Content</h1>
+    <div class="ui centered dividing header">
+      <div class="ui huge header">Submit Information/Content</div>
     </div>
 
     <div class="ui item">
       <h3>Rules for Submitting:</h3>
-      <p>1. Be nice.</p>
-      <p>2. No swearing.</p>
-      <p>3. No inappropriate content.</p>
+      <div class="rule">1. Be nice.</div>
+      <div class="rule">2. No swearing.</div>
+      <div class="rule">3. No inappropriate content.</div>
+    </div>
 
+    <div class="ui item">
       <div class="field">
         <div class="ui checkbox">
           <input type="checkbox" tabindex="0" class="hidden">
-          <label>I agree to the Terms and Conditions</label>
+          <label>I agree to the rules that are stated above.</label>
         </div>
       </div>
     </div>
@@ -31,7 +33,7 @@
         errorMessage=(fieldError "subject")}}
       </div>
 
-      <div class="field">
+      <!-- div class="field">
         <label>Thread</label>
         <select class="ui fluid dropdown" name="Thread">
           <option value="">Select Thread...</option>
@@ -41,15 +43,16 @@
           <option value="campus-security">Campus Security</option>
           <option value="campus-events">Campus Services</option>
         </select>
-      </div>
-
-      <!-- div class="field">
-        {{> Select_Form_Control label="Thread" placeholder="Select Thread..." options=threadName
-        errorMessage=(fieldError "threadName") multiple=false }}
       </div -->
 
       <div class="field">
-        {{> TextArea_Form_Control label="Info/Question" placeholder="What time does Sinclair open?" value=submit.info errorMessage=(fieldError "info")}}
+        {{> Select_Form_Control label="Thread" placeholder="Select Thread..." options=threadName
+        errorMessage=(fieldError "threadName") multiple=false }}
+      </div>
+
+      <div class="field">
+        {{> TextArea_Form_Control label="Info/Question" placeholder="What time does Sinclair open?" value=submit.info
+        errorMessage=(fieldError "info")}}
       </div>
 
       <div class="fields">

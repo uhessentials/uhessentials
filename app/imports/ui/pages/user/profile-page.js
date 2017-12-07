@@ -3,13 +3,11 @@ import { ReactiveDict } from 'meteor/reactive-dict';
 import { FlowRouter } from 'meteor/kadira:flow-router';
 import { _ } from 'meteor/underscore';
 import { Profiles } from '/imports/api/profile/ProfileCollection';
-import { Campuses } from '/imports/api/campus/CampusCollection';
 
 const displaySuccessMessage = 'displaySuccessMessage';
 const displayErrorMessages = 'displayErrorMessages';
 
 Template.Profile_Page.onCreated(function onCreated() {
-  this.subscribe(Campuses.getPublicationName());
   this.subscribe(Profiles.getPublicationName());
   this.messageFlags = new ReactiveDict();
   this.messageFlags.set(displaySuccessMessage, false);
@@ -29,14 +27,6 @@ Template.Profile_Page.helpers({
   },
   profile() {
     return Profiles.findDoc(FlowRouter.getParam('username'));
-  },
-  campuses() {
-    const profile = Profiles.findDoc(FlowRouter.getParam('username'));
-    const selectedCampuses = profile.campuses;
-    return profile && _.map(Campuses.findAll(),
-        function makeCampusObject(campus) {
-          return { label: campus.name, selected: _.contains(selectedCampuses, campus.name) };
-        });
   },
   routeUserName() {
     return FlowRouter.getParam('username');
