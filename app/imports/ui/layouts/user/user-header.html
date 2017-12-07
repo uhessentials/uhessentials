@@ -21,7 +21,7 @@
       </div>
 
       <div class="right aligned item">
-        <a class="{{isActiveRoute "Profile_Page"}} item" href="{{pathFor "Profile_Page" username=routeUserName}}">Profile</a>
+        <a class="{{isActiveRoute "Profile_Page"}} item" href="{{pathFor "Profile_Page" username=routeUserName}}">{{routeUserName}}</a>
         {{> Cas_Login }}
       </div>
     </div>
