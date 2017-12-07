@@ -1,9 +1,5 @@
 import { Meteor } from 'meteor/meteor';
 import { Profiles } from '/imports/api/profile/ProfileCollection';
-<<<<<<< HEAD
-import { Posts } from '/imports/api/post/PostCollection';
-=======
->>>>>>> master
 import { Threads } from '/imports/api/thread/ThreadCollection';
 import { _ } from 'meteor/underscore';
 
@@ -32,11 +28,7 @@ function restoreCollection(collection, restoreJSON) {
 
 Meteor.startup(() => {
   /** Only initialize database if it's empty. */
-<<<<<<< HEAD
-  const collectionList = [Profiles, Posts, Threads];
-=======
-  const collectionList = [Threads, Profiles];
->>>>>>> master
+  const collectionList = [Profiles, Threads];
   const totalDocuments = _.reduce(collectionList, function reducer(memo, collection) {
     return memo + collection.count();
   }, 0);

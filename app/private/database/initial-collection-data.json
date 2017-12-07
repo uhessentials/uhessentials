@@ -27,51 +27,6 @@
       ]
     },
     {
-      "name": "PostCollection",
-      "contents": [
-        {
-          "subject": "Sinclair Library hours",
-          "info": "What time does Sinclair close?",
-          "threads": "Campus Events"
-        },
-        {
-          "subject": "Shuttle to BIOMED",
-          "info": "Is there a shuttle that goes to BIOMED from Gateway? I'm running a bit late to class.",
-          "threads": "Commuting"
-        },
-        {
-          "subject": "ISO Calc I-IV textbook",
-          "username": "aaibala",
-          "info": "Anyone selling their calculus textbook? Bookstore only sells it with the myMathLab code (which we don't even need), and it's expensive.",
-          "threads": "Campus Events"
-        },
-        {
-          "subject": "Summer Registration",
-          "username": "aaibala",
-          "info": "When does registration for summer classes start?",
-          "threads": "Degree Programs"
-        },
-        {
-          "subject": "NBA Preseason Game",
-          "username": "aaibala",
-          "info": "Looking for two tickets to the Clippers & Raptors game this Sunday (10/1)!!! LMK.",
-          "threads": "Campus Events"
-        },
-        {
-          "subject": "Free-to-use microwave?",
-          "username": "aaibala",
-          "info": "Is there a microwave that students can use for home lunch",
-          "threads": "Food Services"
-        },
-        {
-          "subject": "Shuttle to the parking structure",
-          "username": "aaibala",
-          "info": "Is there are a shuttle that goes directly to the parking structure?",
-          "threads": "Commuting"
-        }
-      ]
-    },
-    {
       "name": "ProfileCollection",
       "contents": [
         {
