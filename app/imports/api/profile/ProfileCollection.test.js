@@ -11,13 +11,12 @@ if (Meteor.isServer) {
     const firstName = 'April';
     const lastName = 'Bala';
     const username = 'aaibala';
-    const standing = 'Student';
+    const title = 'Student';
     const campus = 'University of Hawaii at Manoa';
-    const gender = 'female';
     const picture = '';
     const bio = 'I am a student at UH Manoa.';
 
-    const defineObject = { firstName, lastName, username, standing, campus, gender, picture, bio };
+    const defineObject = { firstName, lastName, username, title, campus, picture, bio };
 
     before(function setup() {
       removeAllEntities();
@@ -35,9 +34,8 @@ if (Meteor.isServer) {
       expect(doc.firstName).to.equal(firstName);
       expect(doc.lastName).to.equal(lastName);
       expect(doc.username).to.equal(username);
-      expect(doc.standing).to.equal(standing);
+      expect(doc.title).to.equal(title);
       expect(doc.campus).to.equal(campus);
-      expect(doc.gender).to.equal(gender);
       expect(doc.picture).to.equal(picture);
       expect(doc.bio).to.equal(bio);
       // Check that multiple definitions with the same email address fail
@@ -52,12 +50,12 @@ if (Meteor.isServer) {
     });
 
     it(function test() {
-      const defineObject2 = { firstName, lastName, username, standing, campus, gender, picture, bio };
+      const defineObject2 = { firstName, lastName, username, title, campus, picture, bio };
       expect(function foo() { Profiles.define(defineObject2); }).to.throw(Error);
     });
 
     it(function test() {
-      const defineObject3 = { firstName, lastName, username, standing, campus, gender, picture, bio };
+      const defineObject3 = { firstName, lastName, username, title, campus, picture, bio };
       expect(function foo() { Profiles.define(defineObject3); }).to.throw(Error);
     });
   });
