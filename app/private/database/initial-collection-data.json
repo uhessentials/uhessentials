@@ -1,7 +1,6 @@
 {
   "comment": "Initial contents for the UH Essentials database. For development purposes only.",
   "collections": [
-
     {
       "name": "ThreadCollection",
       "contents": [
@@ -24,6 +23,41 @@
         {
           "name": "Food Services",
           "description": ""
+        }
+      ]
+    },
+    {
+      "name": "CampusCollection",
+      "contents": [
+        {
+          "name": "Hawaiʻi Community College"
+        },
+        {
+          "name": "Honolulu Community College"
+        },
+        {
+          "name": "Kapiʻolani Community College"
+        },
+        {
+          "name": "Kauaʻi Community College"
+        },
+        {
+          "name": "Leeward Community College"
+        },
+        {
+          "name": "Windward Community College"
+        },
+        {
+          "name": "University of Hawaiʻi, Hilo"
+        },
+        {
+          "name": "University of Hawaiʻi, Mānoa"
+        },
+        {
+          "name": "University of Hawaiʻi Maui College"
+        },
+        {
+          "name": "University of Hawaiʻi, West Oʻahu"
         }
       ]
     },

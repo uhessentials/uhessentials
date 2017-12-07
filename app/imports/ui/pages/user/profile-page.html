@@ -7,7 +7,6 @@
       Profile
     </div>
     <form class="ui equal width form profile-data-form {{ successClass }} {{ errorClass }}">
-
       <div class="fields">
         {{> Text_Form_Control label="First" placeholder="John" value=profile.firstName errorMessage=(fieldError
         "firstName")}}
@@ -20,37 +19,17 @@
         "title")}}
       </div>
 
-      <div class="field" value=profile.campus>
-        <label>Campus</label>
-        <select class="ui dropdown" name="Campus">
-          <option value="">Select One...</option>
-          <option value="Hawaiʻi Community College">Hawaiʻi Community College</option>
-          <option value="Honolulu Community College">Honolulu Community College</option>
-          <option value="Kapiʻolani Community College">Kapiʻolani Community College</option>
-          <option value="Kauaʻi Community College">Kauaʻi Community College</option>
-          <option value="Leeward Community College">Leeward Community College</option>
-          <option value="Windward Community College">Windward Community College</option>
-          <option value="University of Hawaiʻi, Hilo">University of Hawaiʻi, Hilo</option>
-          <option value="University of Hawaiʻi, Mānoa">University of Hawaiʻi, Mānoa</option>
-          <option value="University of Hawaiʻi Maui College">University of Hawaiʻi Maui College</option>
-          <option value="University of Hawaiʻi, West Oʻahu">University of Hawaiʻi, West Oʻahu</option>
-        </select>
+      <div class="field">
+        {{> Select_Form_Control label="Campus" options=campuses errorMessage=(fieldError "campuses") }}
       </div>
 
       <div class="field">
-        <!-- {{> Text_Form_Control label="Standing" placeholder="Student/Teacher" value=profile.standing
-        errorMessage=(fieldError "standing")}} -->
-        <!-- {{> Text_Form_Control label="Campus" placeholder="University of Hawaii at Manoa" value=profile.campus
-        errorMessage=(fieldError "campus")}} -->
-        <!-- {{> Text_Form_Control label="Gender" placeholder="Male/Female/Other" value=profile.gender
-        errorMessage=(fieldError "gender")}} -->
         {{> Text_Form_Control label="Picture" placeholder="http://foo.com/shot.jpg" value=profile.picture
         errorMessage=(fieldError "picture")}}
       </div>
 
       {{> TextArea_Form_Control label="Bio" value=profile.bio placeholder="Short bio statement here"
       errorMessage=(fieldError "bio")}}
-
 
       <button class="ui primary button" type="submit">Submit</button>
       {{#if displaySuccessMessage}}
