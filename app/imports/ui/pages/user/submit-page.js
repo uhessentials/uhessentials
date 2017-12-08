@@ -9,7 +9,6 @@ const displaySuccessMessage = 'displaySuccessMessage';
 const displayErrorMessages = 'displayErrorMessages';
 const selectedThreadsKey = 'selectedThreads';
 
-
 Template.Submit_Page.onCreated(function onCreated() {
   this.subscribe(Profiles.getPublicationName());
   this.subscribe(Threads.getPublicationName());
@@ -43,7 +42,6 @@ Template.Submit_Page.helpers({
         });
   },
 });
-
 
 Template.Submit_Page.events({
   'submit .submit-data-form'(event, instance) {

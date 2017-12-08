@@ -38,13 +38,9 @@ class ProfileCollection extends BaseCollection {
    *                   lastName: 'Johnson',
    *                   username: 'johnson',
    *                   bio: 'I have been a professor of computer science at UH since 1990.',
-   *                   interests: ['Application Development', 'Software Engineering', 'Databases'],
-   *                   title: 'Professor of Information and Computer Sciences',
-   *                   location: 'Honolulu, HI'
+   *                   campuses: ['University of Hawaiʻi, Mānoa'],
+   *                   standing: 'Professor of Information and Computer Sciences',
    *                   picture: 'http://philipmjohnson.org/headshot.jpg',
-   *                   github: 'https://github.com/philipmjohnson',
-   *                   facebook: 'https://facebook.com/philipmjohnson',
-   *                   instagram: 'https://instagram.com/philipmjohnson' });
    * @param { Object } description Object with required key username.
    * Remaining keys are optional.
    * Username must be unique for all users. It should be the UH email account.
