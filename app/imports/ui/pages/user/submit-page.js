@@ -8,6 +8,10 @@ import { Threads } from '/imports/api/thread/ThreadCollection';
 const displaySuccessMessage = 'displaySuccessMessage';
 const displayErrorMessages = 'displayErrorMessages';
 const selectedThreadsKey = 'selectedThreads';
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 
 Template.Submit_Page.onCreated(function onCreated() {
   this.subscribe(Profiles.getPublicationName());

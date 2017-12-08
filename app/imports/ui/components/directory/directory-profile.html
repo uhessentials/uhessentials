@@ -8,10 +8,12 @@
         {{ profile.firstName }} {{ profile.lastName }}
       </div>
       <div class="meta">
-        {{ profile.campus }}
-        <br />
-        {{ profile.standing }} | {{ profile.gender }}
+        {{ profile.standing }}
       </div>
+      <div class="meta">
+        {{ profile.campus }},
+      </div>
+
       <div class="description">
         {{ profile.bio }}
       </div>
@@ -19,7 +21,7 @@
 
     <div class="extra content">
       <div class="ui equal width center aligned grid">
-        <div class="column"><a href="mailto:{{ profile.username}}@hawaii.edu"><i class="big mail icon"></i></a></div>
+        <div class="column"><a href="mailto:{{ profile.username }}@hawaii.edu"><i class="big mail icon"></i></a></div>
       </div>
     </div>
   </div>

@@ -1,27 +1,8 @@
-.landing-section-1 {
-  padding: 10px 10px 30px 10px;
-  background-color: #024731;
-  color: #ffffff;
+.ui.borderless.background {
+  background: linear-gradient(to right, mediumseagreen, #024731);
+  padding: 50px 50px 100px 100px;
+  color: white;
 }
-
-.landing-section-2 {
-  padding: 20px 10px 20px 10px;
-  background-color: #ffffff;
-  color:  #024731;
-}
-
-.landing-section-3 {
-  padding: 20px 10px 30px 30px;
-  background-color: #024731;
-  color: #ffffff;
-}
-
-.landing-section-5 {
-  padding: 20px 10px 20px 10px;
-  background-color: #ffffff;
-  color:#024731;
-}
-
 
 .landing-section-1-welcome {
   font-family: 'Roboto', sans-serif;
@@ -29,8 +10,28 @@
   font-size: 72px;
 }
 
+.landing-section-1-tagline {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  font-size: 25px;
+}
+
+.landing-section-2-tagline {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  font-size: 40px;
+}
+
 .landing-section-header {
   font-family: 'Roboto', sans-serif;
   font-weight: 900;
   font-size: 36px;
+}
+
+.ui.centered.borderless.menu {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  font-size: 40px;
+  color: black;
+
 }
