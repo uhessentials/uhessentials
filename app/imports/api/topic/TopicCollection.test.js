@@ -8,9 +8,9 @@ import { expect } from 'chai';
 import { removeAllEntities } from '/imports/api/base/BaseUtilities';
 
 if (Meteor.isServer) {
-  describe('ProfileCollection', function testSuite() {
+  describe('TopicCollection', function testSuite() {
     const threadName = 'Degree Programs';
-    const threadDescription = 'This thread contains questions regarding university degrees, majors, minors, classes, registration, etc.';
+    const threadDescription = 'This thread contains questions about majors, minors, classes, registration, etc.';
     const username = 'aaibala';
     const title = 'Summer 2018 Registration';
     const threads = [threadName];
@@ -37,7 +37,9 @@ if (Meteor.isServer) {
       expect(doc.threads[0]).to.equal(threadName);
       expect(doc.info).to.equal(info);
       // Check that multiple definitions with the same email address fail
-      expect(function foo() { Topics.define(defineObject); }).to.throw(Error);
+      expect(function foo() {
+        Topics.define(defineObject);
+      }).to.throw(Error);
       // Check that we can dump and restore a Profile.
       const dumpObject = Topics.dumpOne(docID);
       Topics.removeIt(docID);
@@ -50,14 +52,17 @@ if (Meteor.isServer) {
     it('#define (illegal thread)', function test() {
       const illegalThreads = ['foo'];
       const defineObject2 = { username, title, threads: illegalThreads, info };
-      expect(function foo() { Topics.define(defineObject2); }).to.throw(Error);
+      expect(function foo() {
+        Topics.define(defineObject2);
+      }).to.throw(Error);
     });
 
     it('#define (duplicate threads)', function test() {
       const duplicateThreads = [threadName, threadName];
       const defineObject3 = { username, title, threads: duplicateThreads, info };
-      expect(function foo() { Topics.define(defineObject3); }).to.throw(Error);
+      expect(function foo() {
+        Topics.define(defineObject3);
+      }).to.throw(Error);
     });
   });
 }
-

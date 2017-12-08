@@ -14,7 +14,7 @@ import { Tracker } from 'meteor/tracker';
 class TopicCollection extends BaseCollection {
 
   /**
-   * Creates the Profile collection.
+   * Creates the Topic collection.
    */
   constructor() {
     super('Topic', new SimpleSchema({
