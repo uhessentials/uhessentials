@@ -30,10 +30,6 @@ Template.Profile_Page.helpers({
   profile() {
     return Profiles.findDoc(FlowRouter.getParam('username'));
   },
-<<<<<<< HEAD
-  routeUserName() {
-    return FlowRouter.getParam('username');
-=======
   campuses() {
     const profile = Profiles.findDoc(FlowRouter.getParam('username'));
     const selectedCampuses = profile.campuses;
@@ -41,7 +37,6 @@ Template.Profile_Page.helpers({
         function makeCampusObject(campus) {
           return { label: campus.name, selected: _.contains(selectedCampuses, campus.name) };
         });
->>>>>>> master
   },
 });
 
@@ -51,24 +46,13 @@ Template.Profile_Page.events({
     const username = FlowRouter.getParam('username'); // schema requires username.
     const firstName = event.target.First.value;
     const lastName = event.target.Last.value;
-<<<<<<< HEAD
-    const title = event.target.Title.value;
-    const username = FlowRouter.getParam('username'); // schema requires username.
-=======
     const standing = event.target.Standing.value;
     const selectedCampuses = _.filter(event.target.Campuses, (option) => option.selected);
     const campuses = _.map(selectedCampuses, (option) => option.value);
->>>>>>> master
     const picture = event.target.Picture.value;
     const bio = event.target.Bio.value;
-    const selectedCampuses = _.filter(event.target.Campuses.selectedOptions, (option) => option.selected);
-    const campuses = _.map(selectedCampuses, (option) => option.value);
 
-<<<<<<< HEAD
-    const updatedProfileData = { username, firstName, lastName, title, campuses, picture, bio };
-=======
     const updatedProfileData = { username, firstName, lastName, standing, campuses, picture, bio };
->>>>>>> master
 
     // Clear out any old validation errors.
     instance.context.reset();
@@ -88,4 +72,3 @@ Template.Profile_Page.events({
     }
   },
 });
-

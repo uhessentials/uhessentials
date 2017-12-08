@@ -88,7 +88,7 @@
           "firstName": "Kyungim",
           "lastName": "Baek",
           "standing": "ICS Associate Professor",
-          "campus": "University of Hawaii, Manoa",
+          "campuses": "University of Hawaii, Manoa",
           "picture": "/images/baek.jpg",
           "bio": "I am an Associate Professor of Information and Computer Sciences at the University of Hawaii."
         },
@@ -97,7 +97,7 @@
           "firstName": "Edo",
           "lastName": "Biagioni",
           "standing": "ICS Associate Professor",
-          "campus": "University of Hawaii, Manoa",
+          "campuses": "University of Hawaii, Manoa",
           "picture": "/images/biagioni.jpg",
           "bio": "I am an Associate Professor of Information and Computer Sciences at the University of Hawaii."
         },
@@ -106,7 +106,7 @@
           "firstName": "Kim",
           "lastName": "Binsted",
           "standing": "ICS Associate Professor",
-          "campus": "University of Hawaii, Manoa",
+          "campuses": "University of Hawaii, Manoa",
           "picture": "/images/binsted.jpg",
           "bio": "I am an Associate Professor of Information and Computer Sciences at the University of Hawaii."
         },
@@ -115,7 +115,7 @@
           "firstName": "Henri",
           "lastName": "Casanova",
           "standing": "ICS Professor",
-          "campus": "University of Hawaii, Manoa",
+          "campuses": "University of Hawaii, Manoa",
           "picture": "/images/casanova.jpg",
           "bio": "I am a Professor of Information and Computer Sciences at the University of Hawaii."
         },
@@ -124,7 +124,7 @@
           "firstName": "Lee",
           "lastName": "Altenberg",
           "standing": "ICS Associate Professor",
-          "campus": "University of Hawaii, Manoa",
+          "campuses": "University of Hawaii, Manoa",
           "picture": "/images/altenberg.jpg",
           "bio": "I am an Associate Professor of Information and Computer Sciences at the University of Hawaii."
         }

@@ -8,10 +8,6 @@ import { Threads } from '/imports/api/thread/ThreadCollection';
 const displaySuccessMessage = 'displaySuccessMessage';
 const displayErrorMessages = 'displayErrorMessages';
 const selectedThreadsKey = 'selectedThreads';
-<<<<<<< HEAD
-=======
-
->>>>>>> master
 
 Template.Submit_Page.onCreated(function onCreated() {
   this.subscribe(Profiles.getPublicationName());
@@ -50,11 +46,11 @@ Template.Submit_Page.helpers({
 Template.Submit_Page.events({
   'submit .submit-data-form'(event, instance) {
     event.preventDefault();
-    const subject = event.target.Subject.value;
+    const title = event.target.Title.value;
     const username = FlowRouter.getParam('username'); // schema requires username.
     const info = event.target.Info.value;
 
-    const updatedPostData = { username, subject, info };
+    const updatedSubmitData = { title, username, info };
 
     const selectedOptions = _.filter(event.target.Threads.selectedOptions, (option) => option.selected);
     instance.messageFlags.set(selectedThreadsKey, _.map(selectedOptions, (option) => option.value));
@@ -62,7 +58,7 @@ Template.Submit_Page.events({
     // Clear out any old validation errors.
     instance.context.reset();
     // Invoke clean so that updatedProfileData reflects what will be inserted.
-    const cleanData = Profiles.getSchema().clean(updatedPostData);
+    const cleanData = Profiles.getSchema().clean(updatedSubmitData);
     // Determine validity.
     instance.context.validate(cleanData);
 
@@ -77,4 +73,3 @@ Template.Submit_Page.events({
     }
   },
 });
-

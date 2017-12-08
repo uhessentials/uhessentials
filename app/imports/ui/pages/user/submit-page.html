@@ -8,25 +8,23 @@
       <div class="ui huge header">Submit Information/Content</div>
     </div>
 
-    <div class="ui item">
-      <h3>Rules for Submitting:</h3>
-      <div class="rule">1. Be nice.</div>
-      <div class="rule">2. No swearing.</div>
-      <div class="rule">3. No inappropriate content.</div>
-    </div>
-
-    <div class="ui item">
-      <div class="field">
-        <div class="ui checkbox">
-          <input type="checkbox" tabindex="0" class="hidden">
-          <label>I agree to the rules that are stated above.</label>
-        </div>
-      </div>
-    </div>
-
-    <div class="ui divider"></div>
+    <div class="ui large header">Rules for Submitting:</div>
+    <div class="item">1. Be nice.</div>
+    <div class="item">2. No swearing.</div>
+    <div class="item">3. No inappropriate content.</div>
 
     <form class="ui equal width form submit-data-form {{ errorClass }}">
+      <div class="field" style="margin-top:20px">
+        <div class="ui checkbox">
+          <input type="checkbox" tabindex="0" class="hidden">
+          <label>
+            I agree to the rules that are stated above.
+            <i>(Disclaimer: If not checked, the topic you submit will be deleted.)</i>
+          </label>
+        </div>
+      </div>
+
+      <div class="ui divider"></div>
 
       <div class="field">
         {{> Text_Form_Control label="Subject" placeholder="Sinclair Hours" value=submit.subject
@@ -34,12 +32,7 @@
       </div>
 
       <div class="field">
-<<<<<<< HEAD
-        {{> Select_Form_Control label="Thread" placeholder="Select Thread..." options=thread
-        errorMessage=(fieldError "thread")}}
-=======
         {{> Select_Form_Control label="Thread" options=threads errorMessage=(fieldError "threads") single=true }}
->>>>>>> master
       </div>
 
       <div class="field">
@@ -47,12 +40,17 @@
         errorMessage=(fieldError "info")}}
       </div>
 
-
       <button class="ui primary button" type="submit">Submit</button>
-
     </form>
 
   </div>
+
+  <!-- Needed for checkbox to work -->
+  <script>
+    $('.ui.checkbox')
+        .checkbox()
+    ;
+  </script>
 
   {{/if}}
 
