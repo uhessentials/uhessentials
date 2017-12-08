@@ -31,7 +31,7 @@ function restoreCollection(collection, restoreJSON) {
 Meteor.startup(() => {
   /** Only initialize database if it's empty. */
 
-  const collectionList = [Threads, Campuses, Topics, Profiles];
+  const collectionList = [Campuses, Threads, Topics, Profiles];
 
   const totalDocuments = _.reduce(collectionList, function reducer(memo, collection) {
     return memo + collection.count();

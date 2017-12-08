@@ -1,27 +1,29 @@
 import SimpleSchema from 'simpl-schema';
 import BaseCollection from '/imports/api/base/BaseCollection';
+import { Threads } from '/imports/api/thread/ThreadCollection';
 import { check } from 'meteor/check';
-import { _ } from 'meteor/underscore';
 import { Tracker } from 'meteor/tracker';
 
 class TopicCollection extends BaseCollection {
   constructor() {
     super('Topic', new SimpleSchema({
-      title: { type: String, optional: true },
-      thread: { type: Array, optional: true },
+      title: { type: String },
+      thread: { type: Array },
       'thread.$': { type: String },
       information: { type: String, optional: true },
     }, { tracker: Tracker }));
   }
-  define({ title = '', thread = [], information = '' }) {
+  define({ title = '', threads = [], information = '' }) {
     // make sure required fields are OK.
     const checkPattern = {
       title: String,
       information: String,
     };
     check({ title, information }, checkPattern);
-    return this._collection.insert({ title, thread, information });
+    Threads.assertNames(threads);
+    return this._collection.insert({ title, threads, information });
   }
+
 
   /**
    * Returns an object representing the Profile docID in a format acceptable to define().
@@ -31,10 +33,10 @@ class TopicCollection extends BaseCollection {
   dumpOne(docID) {
     const doc = this.findDoc(docID);
     const title = doc.title;
-    const thread = doc.thread;
+    const threads = doc.threads;
     const information = doc.information;
 
-    return { title, thread, information };
+    return { title, threads, information };
   }
 }
 
