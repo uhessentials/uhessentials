@@ -7,11 +7,10 @@ import { Campuses } from '/imports/api/campus/CampusCollection';
 
 const displaySuccessMessage = 'displaySuccessMessage';
 const displayErrorMessages = 'displayErrorMessages';
-const selectedCampusesKey = 'selectedCampuses';
 
 Template.Profile_Page.onCreated(function onCreated() {
-  this.subscribe(Profiles.getPublicationName());
   this.subscribe(Campuses.getPublicationName());
+  this.subscribe(Profiles.getPublicationName());
   this.messageFlags = new ReactiveDict();
   this.messageFlags.set(displaySuccessMessage, false);
   this.messageFlags.set(displayErrorMessages, false);
@@ -32,28 +31,29 @@ Template.Profile_Page.helpers({
     return Profiles.findDoc(FlowRouter.getParam('username'));
   },
   campuses() {
-    const profile = Profiles.findDoc(FlowRouter.getParam('username'));
+    const profile = Campuses.findDoc(FlowRouter.getParam('username'));
     const selectedCampuses = profile.campuses;
     return profile && _.map(Campuses.findAll(),
-        function makeInterestObject(interest) {
-          return { label: interest.name, selected: _.contains(selectedCampuses, interest.name) };
+        function makeCampusObject(campus) {
+          return { label: campus.name, selected: _.contains(selectedCampuses, campus.name) };
         });
   },
 });
 
+
 Template.Profile_Page.events({
   'submit .profile-data-form'(event, instance) {
     event.preventDefault();
+    const username = FlowRouter.getParam('username'); // schema requires username.
     const firstName = event.target.First.value;
     const lastName = event.target.Last.value;
     const standing = event.target.Standing.value;
-    const username = FlowRouter.getParam('username'); // schema requires username.
-    const picture = event.target.Picture.value;
-    const bio = event.target.Bio.value;
     const selectedCampuses = _.filter(event.target.Campuses.selectedOptions, (option) => option.selected);
     const campuses = _.map(selectedCampuses, (option) => option.value);
+    const picture = event.target.Picture.value;
+    const bio = event.target.Bio.value;
 
-    const updatedProfileData = { firstName, lastName, standing, campuses, picture, bio, username };
+    const updatedProfileData = { username, firstName, lastName, standing, campuses, picture, bio };
 
     // Clear out any old validation errors.
     instance.context.reset();

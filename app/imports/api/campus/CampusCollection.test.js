@@ -8,8 +8,8 @@ import { removeAllEntities } from '/imports/api/base/BaseUtilities';
 
 if (Meteor.isServer) {
   describe('CampusCollection', function testSuite() {
-    const name = 'Campus type';
-    const description = 'Defines a profile of which campus they are on';
+    const name = '';
+    const description = '';
     const defineObject = { name, description };
 
     before(function setup() {
@@ -29,7 +29,7 @@ if (Meteor.isServer) {
       expect(doc.description).to.equal(description);
       // Check that multiple definitions with the same name fail
       expect(function foo() { Campuses.define(defineObject); }).to.throw(Error);
-      // Check that we can dump and restore a Interest.
+      // Check that we can dump and restore a Campuses.
       const dumpObject = Campuses.dumpOne(docID);
       Campuses.removeIt(docID);
       expect(Campuses.isDefined(docID)).to.be.false;

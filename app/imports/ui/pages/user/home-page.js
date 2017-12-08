@@ -32,37 +32,3 @@ Template.Home_Page.helpers({
     return FlowRouter.getParam('username');
   },
 });
-
-Template.Home_Page.events({
-  'submit .home-data-form'(event, instance) {
-    event.preventDefault();
-    const firstName = event.target.First.value;
-    const lastName = event.target.Last.value;
-    const title = event.target.Title.value;
-    const username = FlowRouter.getParam('username'); // schema requires username.
-    const picture = event.target.Picture.value;
-    const bio = event.target.Bio.value;
-
-    const updatedHomeData = { firstName, lastName, title, picture, bio, username };
-
-    // Clear out any old validation errors.
-    instance.context.reset();
-    // Invoke clean so that updatedProfileData reflects what will be inserted.
-    const cleanData = Profiles.getSchema().clean(updatedHomeData);
-    // Determine validity.
-    instance.context.validate(cleanData);
-
-    if (instance.context.isValid()) {
-      const docID = Profiles.findDoc(FlowRouter.getParam('username'))._id;
-      const id = Profiles.update(docID, { $set: cleanData });
-      instance.messageFlags.set(displaySuccessMessage, id);
-      instance.messageFlags.set(displayErrorMessages, false);
-    } else {
-      instance.messageFlags.set(displaySuccessMessage, false);
-      instance.messageFlags.set(displayErrorMessages, true);
-    }
-  },
-
-
-});
-

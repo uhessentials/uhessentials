@@ -8,19 +8,19 @@
     </div>
     <form class="ui equal width form profile-data-form {{ successClass }} {{ errorClass }}">
       <div class="fields">
-        {{> Text_Form_Control label="First" placeholder="John" value=profile.firstName errorMessage=(fieldError
+        {{> Text_Form_Control label="First" placeholder="First Name" value=profile.firstName errorMessage=(fieldError
         "firstName")}}
-        {{> Text_Form_Control label="Last" placeholder="Smith" value=profile.lastName errorMessage=(fieldError
+        {{> Text_Form_Control label="Last" placeholder="Last Name" value=profile.lastName errorMessage=(fieldError
         "lastName")}}
       </div>
 
       <div class="field">
-        {{> Text_Form_Control label="Standing" placeholder="CHEM Professor" value=profile.standing
-        errorMessage=(fieldError"standing")}}
+        {{> Text_Form_Control label="Standing" placeholder="Stundet/Professor/Staff" value=profile.standing
+        errorMessage=(fieldError "standing")}}
       </div>
 
       <div class="field">
-        {{> Select_Form_Control label="Campus" options=campuses errorMessage=(fieldError "campuses") }}
+        {{> Select_Form_Control label="Campus" options=campuses errorMessage=(fieldError "campuses") single=true }}
       </div>
 
       <div class="field">
@@ -28,7 +28,7 @@
         errorMessage=(fieldError "picture")}}
       </div>
 
-      {{> TextArea_Form_Control label="Bio" value=profile.bio placeholder="Short bio statement here"
+      {{> TextArea_Form_Control label="Bio" value=profile.bio placeholder="Short description about yourself"
       errorMessage=(fieldError "bio")}}
 
       <button class="ui primary button" type="submit">Submit</button>

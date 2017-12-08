@@ -30,34 +30,53 @@
       "name": "CampusCollection",
       "contents": [
         {
-          "name": "Hawaiʻi Community College"
+          "name": "Hawaii Community College",
+          "description": ""
         },
         {
-          "name": "Honolulu Community College"
+          "name": "Honolulu Community College",
+          "description": ""
+
         },
         {
-          "name": "Kapiʻolani Community College"
+          "name": "Kapiolani Community College",
+          "description": ""
+
         },
         {
-          "name": "Kauaʻi Community College"
+          "name": "Kauai Community College",
+          "description": ""
+
         },
         {
-          "name": "Leeward Community College"
+          "name": "Leeward Community College",
+          "description": ""
+
         },
         {
-          "name": "Windward Community College"
+          "name": "Windward Community College",
+          "description": ""
+
         },
         {
-          "name": "University of Hawaiʻi, Hilo"
+          "name": "University of Hawaii, Hilo",
+          "description": ""
+
         },
         {
-          "name": "University of Hawaiʻi, Mānoa"
+          "name": "University of Hawaii, Manoa",
+          "description": ""
+
         },
         {
-          "name": "University of Hawaiʻi Maui College"
+          "name": "University of Hawaii Maui College",
+          "description": ""
+
         },
         {
-          "name": "University of Hawaiʻi, West Oʻahu"
+          "name": "University of Hawaii, West Oahu",
+          "description": ""
+
         }
       ]
     },
@@ -65,49 +84,49 @@
       "name": "ProfileCollection",
       "contents": [
         {
+          "username": "baek",
           "firstName": "Kyungim",
           "lastName": "Baek",
-          "username": "baek",
-          "bio": "I am an Associate Professor of Information and Computer Sciences at the University of Hawaii.",
           "standing": "ICS Associate Professor",
-          "campus": "University of Hawaii at Manoa",
-          "picture": "/images/baek.jpg"
+          "campus": "University of Hawaii, Manoa",
+          "picture": "/images/baek.jpg",
+          "bio": "I am an Associate Professor of Information and Computer Sciences at the University of Hawaii."
         },
         {
+          "username": "esb",
           "firstName": "Edo",
           "lastName": "Biagioni",
-          "username": "esb",
-          "bio": "I am an Associate Professor of Information and Computer Sciences at the University of Hawaii.",
           "standing": "ICS Associate Professor",
-          "campus": "University of Hawaii at Manoa",
-          "picture": "/images/biagioni.jpg"
+          "campus": "University of Hawaii, Manoa",
+          "picture": "/images/biagioni.jpg",
+          "bio": "I am an Associate Professor of Information and Computer Sciences at the University of Hawaii."
         },
         {
+          "username": "binsted",
           "firstName": "Kim",
           "lastName": "Binsted",
-          "username": "binsted",
-          "bio": "I am an Associate Professor of Information and Computer Sciences at the University of Hawaii.",
           "standing": "ICS Associate Professor",
-          "campus": "University of Hawaii at Manoa",
-          "picture": "/images/binsted.jpg"
+          "campus": "University of Hawaii, Manoa",
+          "picture": "/images/binsted.jpg",
+          "bio": "I am an Associate Professor of Information and Computer Sciences at the University of Hawaii."
         },
         {
+          "username": "henric",
           "firstName": "Henri",
           "lastName": "Casanova",
-          "username": "henric",
-          "bio": "I am a Professor of Information and Computer Sciences at the University of Hawaii.",
           "standing": "ICS Professor",
-          "campus": "University of Hawaii at Manoa",
-          "picture": "/images/casanova.jpg"
+          "campus": "University of Hawaii, Manoa",
+          "picture": "/images/casanova.jpg",
+          "bio": "I am a Professor of Information and Computer Sciences at the University of Hawaii."
         },
         {
+          "username": "altenber",
           "firstName": "Lee",
           "lastName": "Altenberg",
-          "username": "altenber",
-          "bio": "I am an Associate Professor of Information and Computer Sciences at the University of Hawaii.",
           "standing": "ICS Associate Professor",
-          "campus": "University of Hawaii at Manoa",
-          "picture": "/images/altenberg.jpg"
+          "campus": "University of Hawaii, Manoa",
+          "picture": "/images/altenberg.jpg",
+          "bio": "I am an Associate Professor of Information and Computer Sciences at the University of Hawaii."
         }
       ]
     }
