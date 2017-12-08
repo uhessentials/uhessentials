@@ -46,17 +46,19 @@ class ProfileCollection extends BaseCollection {
    * @throws { Meteor.Error } If a user with the supplied username already exists.
    * @returns The newly created docID.
    */
-  define({ firstName = '', lastName = '', username, standing = '', campuses = [], gender = '', picture = '', bio = '' }) {
+  define({ firstName = '', lastName = '', username, standing = '', campuses = '',
+           picture = '', bio = '' }) {
     // make sure required fields are OK.
     const checkPattern = {
       firstName: String,
       lastName: String,
       username: String,
       standing: String,
+      campuses: String,
       picture: String,
       bio: String,
     };
-    check({ firstName, lastName, username, standing, picture, bio }, checkPattern);
+    check({ firstName, lastName, username, standing, campuses, picture, bio }, checkPattern);
 
     if (this.find({ username }).count() > 0) {
       throw new Meteor.Error(`${username} is previously defined in another Profile`);
@@ -65,7 +67,7 @@ class ProfileCollection extends BaseCollection {
     // Throw an error if any of the passed Interest names are not defined.
     Campuses.assertNames(campuses);
 
-    return this._collection.insert({ firstName, lastName, username, standing, campuses, gender, picture, bio });
+    return this._collection.insert({ firstName, lastName, username, standing, campuses, picture, bio });
   }
 
   /**

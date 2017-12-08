@@ -32,12 +32,11 @@ Template.Profile_Page.helpers({
     return Profiles.findDoc(FlowRouter.getParam('username'));
   },
   campuses() {
-    return _.map(Campuses.findAll(),
-        function makeCampusObject(campus) {
-          return {
-            label: campus.name,
-            selected: _.contains(Template.instance().messageFlags.get(selectedCampusesKey), campus.name),
-          };
+    const profile = Profiles.findDoc(FlowRouter.getParam('username'));
+    const selectedCampuses = profile.campuses;
+    return profile && _.map(Campuses.findAll(),
+        function makeInterestObject(interest) {
+          return { label: interest.name, selected: _.contains(selectedCampuses, interest.name) };
         });
   },
 });
