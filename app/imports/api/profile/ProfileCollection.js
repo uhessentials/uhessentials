@@ -24,7 +24,7 @@ class ProfileCollection extends BaseCollection {
       firstName: { type: String, optional: true },
       lastName: { type: String, optional: true },
       standing: { type: String, optional: true },
-      campuses: { type: String, optional: true },
+      campuses: { type: Array, optional: true },
       'campuses.$': { type: String },
       picture: { type: SimpleSchema.RegEx.Url, optional: true },
       bio: { type: String, optional: true },
@@ -53,11 +53,11 @@ class ProfileCollection extends BaseCollection {
    * if one or more interests are not defined, or if github, facebook, and instagram are not URLs.
    * @returns The newly created docID.
    */
-  define({ username, firstName = '', lastName = '', standing = '', campuses = '', picture = '', bio = '' }) {
+  define({ username, firstName = '', lastName = '', standing = '', campuses = [], picture = '', bio = '' }) {
     // make sure required fields are OK.
-    const checkPattern = { username: String, firstName: String, lastName: String, standing: String, campuses: String,
+    const checkPattern = { username: String, firstName: String, lastName: String, standing: String,
       picture: String, bio: String };
-    check({ username, firstName, lastName, standing, campuses, picture, bio }, checkPattern);
+    check({ username, firstName, lastName, standing, picture, bio }, checkPattern);
 
     if (this.find({ username }).count() > 0) {
       throw new Meteor.Error(`${username} is previously defined in another Profile`);

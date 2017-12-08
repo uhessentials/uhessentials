@@ -39,7 +39,7 @@ if (Meteor.isServer) {
       expect(doc.firstName).to.equal(firstName);
       expect(doc.lastName).to.equal(lastName);
       expect(doc.standing).to.equal(standing);
-      expect(doc.campuses).to.equal(campusName);
+      expect(doc.campuses[0]).to.equal(campusName);
       expect(doc.picture).to.equal(picture);
       expect(doc.bio).to.equal(bio);
       // Check that multiple definitions with the same email address fail
