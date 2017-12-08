@@ -31,7 +31,7 @@ Template.Profile_Page.helpers({
     return Profiles.findDoc(FlowRouter.getParam('username'));
   },
   campuses() {
-    const profile = Campuses.findDoc(FlowRouter.getParam('username'));
+    const profile = Profiles.findDoc(FlowRouter.getParam('username'));
     const selectedCampuses = profile.campuses;
     return profile && _.map(Campuses.findAll(),
         function makeCampusObject(campus) {
@@ -39,7 +39,6 @@ Template.Profile_Page.helpers({
         });
   },
 });
-
 
 Template.Profile_Page.events({
   'submit .profile-data-form'(event, instance) {
