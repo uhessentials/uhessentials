@@ -47,7 +47,7 @@ Template.Profile_Page.events({
     const firstName = event.target.First.value;
     const lastName = event.target.Last.value;
     const standing = event.target.Standing.value;
-    const selectedCampuses = _.filter(event.target.Campuses.selectedOptions, (option) => option.selected);
+    const selectedCampuses = _.filter(event.target.Campuses, (option) => option.selected);
     const campuses = _.map(selectedCampuses, (option) => option.value);
     const picture = event.target.Picture.value;
     const bio = event.target.Bio.value;
