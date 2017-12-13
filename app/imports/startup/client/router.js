@@ -107,6 +107,14 @@ userRoutes.route('/concert', {
   },
 });
 
+export const sportsPageRouteName = 'Sports_Thread';
+userRoutes.route('/sports', {
+  name: sportsPageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: sportsPageRouteName });
+  },
+});
+
 export const foodPageRouteName = 'Food_Thread';
 userRoutes.route('/food', {
   name: foodPageRouteName,

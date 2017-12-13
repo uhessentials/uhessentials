@@ -1,6 +1,7 @@
 <template name="User_Header">
   <div class="ui top fixed borderless inverted menu">
     <div class="ui container">
+      <img class="ui medium circular image" src="/images/wireframe/square-image.png">
       <div class="item"><h1>UH Essentials</h1></div>
       <a class="{{isActiveRoute "Home_Page"}} item" href="{{pathFor "Home_Page" username=routeUserName}}">Home</a>
 
@@ -20,7 +21,8 @@
         </div>
       </div>
 
-      <div class="right aligned item">
+      <div class="right aligned item" >
+        <i class="user icon"></i>
         <a class="{{isActiveRoute "Profile_Page"}} item" href="{{pathFor "Profile_Page" username=routeUserName}}">{{routeUserName}}</a>
         {{> Cas_Login }}
       </div>
