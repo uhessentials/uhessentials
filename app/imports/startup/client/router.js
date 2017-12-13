@@ -99,22 +99,6 @@ userRoutes.route('/events', {
   },
 });
 
-export const concertPageRouteName = 'Concert_Thread';
-userRoutes.route('/concert', {
-  name: concertPageRouteName,
-  action() {
-    BlazeLayout.render('User_Layout', { main: concertPageRouteName });
-  },
-});
-
-export const sportsPageRouteName = 'Sports_Thread';
-userRoutes.route('/sports', {
-  name: sportsPageRouteName,
-  action() {
-    BlazeLayout.render('User_Layout', { main: sportsPageRouteName });
-  },
-});
-
 export const foodPageRouteName = 'Food_Thread';
 userRoutes.route('/food', {
   name: foodPageRouteName,
@@ -138,6 +122,33 @@ userRoutes.route('/topic', {
     BlazeLayout.render('User_Layout', { main: topicPageRouteName });
   },
 });
+
+
+/*                        ROUTES FOR EVENTS THREAD TOPICS                     */
+export const concertPageRouteName = 'Concert_Thread';
+userRoutes.route('/event/concert', {
+  name: concertPageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: concertPageRouteName });
+  },
+});
+
+export const sportsPageRouteName = 'Sports_Thread';
+userRoutes.route('/event/sports', {
+  name: sportsPageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: sportsPageRouteName });
+  },
+});
+
+/*                        ROUTES FOR SECURITY THREAD TOPICS                     */
+
+
+/*                        ROUTES FOR COMMUTE THREAD TOPICS                     */
+
+/*                        ROUTES FOR DEGREE THREAD TOPICS                     */
+
+/*                        ROUTES FOR FOOD THREAD TOPICS                     */
 
 
 /*                        MISC ROUTES                       */
