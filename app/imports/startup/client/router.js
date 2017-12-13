@@ -165,6 +165,29 @@ userRoutes.route('/food/afterhoursfood', {
   },
 });
 
+export const winterhourfoodPageRouteName = 'WinterHours_Thread';
+userRoutes.route('/food/winterhoursfood', {
+  name: winterhourfoodPageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: winterhourfoodPageRouteName });
+  },
+});
+
+export const mealplanPageRouteName = 'MealPlan_Thread';
+userRoutes.route('/food/mealplan', {
+  name: mealplanPageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: mealplanPageRouteName });
+  },
+});
+
+export const cchoursPageRouteName = 'CCHours_Thread';
+userRoutes.route('/food/cchours', {
+  name: cchoursPageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: cchoursPageRouteName });
+  },
+});
 
 /*                        MISC ROUTES                       */
 FlowRouter.notFound = {
