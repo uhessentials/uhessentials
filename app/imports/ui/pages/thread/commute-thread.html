@@ -3,14 +3,20 @@
   <div class="ui container" style="margin: 20px">
 
     <div class="ui centered dividing header">
-      <div class="ui huge header">Commuting</div>
+      <div class="ui huge header">
+        <div class="content">
+          Commuting <i class="road icon" style="margin-left: 10px"></i>
+          <div class="sub header">A thread about commuting to and from campus. Need directions about how to get
+            somewhere? Drop your questions here!</div>
+        </div>
+      </div>
     </div>
 
     <div class="submit-button">
       <div class="item">
-          <a class="{{isActiveRoute "Submit_Page"}} item" href="{{pathFor "Submit_Page" username=routeUserName}}">
-            <button class="huge fluid ui green button">Submit New Topic</button>
-          </a>
+        <a class="{{isActiveRoute " Submit_Page"}} item" href="{{pathFor "Submit_Page" username=routeUserName}}">
+        <button class="huge fluid ui green button">Submit New Topic</button>
+        </a>
       </div>
     </div>
 
