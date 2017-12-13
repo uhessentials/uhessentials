@@ -99,6 +99,14 @@ userRoutes.route('/events', {
   },
 });
 
+export const concertPageRouteName = 'Concert_Thread';
+userRoutes.route('/concert', {
+  name: concertPageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: concertPageRouteName });
+  },
+});
+
 export const foodPageRouteName = 'Food_Thread';
 userRoutes.route('/food', {
   name: foodPageRouteName,
