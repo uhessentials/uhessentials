@@ -157,6 +157,14 @@ userRoutes.route('/food/foodtrucks', {
   },
 });
 
+export const afterhoursfoodPageRouteName = 'AfterHoursFood_Thread';
+userRoutes.route('/food/afterhoursfood', {
+  name: afterhoursfoodPageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: afterhoursfoodPageRouteName });
+  },
+});
+
 
 /*                        MISC ROUTES                       */
 FlowRouter.notFound = {
