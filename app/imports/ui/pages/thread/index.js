@@ -13,3 +13,10 @@ import './food-thread.js';
 import './security-thread.css';
 import './security-thread.html';
 import './security-thread.js';
+import './events-thread-concert.css';
+import './events-thread-concert.html';
+import './events-thread-concert.js';
+import './events-thread-sports.css';
+import './events-thread-sports.html';
+import './events-thread-sports.js';
+

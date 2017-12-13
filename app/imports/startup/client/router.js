@@ -124,6 +124,33 @@ userRoutes.route('/topic', {
 });
 
 
+/*                        ROUTES FOR EVENTS THREAD TOPICS                     */
+export const concertPageRouteName = 'Concert_Thread';
+userRoutes.route('/event/concert', {
+  name: concertPageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: concertPageRouteName });
+  },
+});
+
+export const sportsPageRouteName = 'Sports_Thread';
+userRoutes.route('/event/sports', {
+  name: sportsPageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: sportsPageRouteName });
+  },
+});
+
+/*                        ROUTES FOR SECURITY THREAD TOPICS                     */
+
+
+/*                        ROUTES FOR COMMUTE THREAD TOPICS                     */
+
+/*                        ROUTES FOR DEGREE THREAD TOPICS                     */
+
+/*                        ROUTES FOR FOOD THREAD TOPICS                     */
+
+
 /*                        MISC ROUTES                       */
 FlowRouter.notFound = {
   action() {
