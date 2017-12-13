@@ -7,7 +7,7 @@ import { Threads } from '/imports/api/thread/ThreadCollection';
 
 const displaySuccessMessage = 'displaySuccessMessage';
 const displayErrorMessages = 'displayErrorMessages';
-const selectedThreadsKey = 'selectedInterests';
+const selectedThreadsKey = 'selectedThreads';
 
 
 Template.Submit_Page.onCreated(function onCreated() {

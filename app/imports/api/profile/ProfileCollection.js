@@ -1,5 +1,6 @@
 import SimpleSchema from 'simpl-schema';
 import BaseCollection from '/imports/api/base/BaseCollection';
+import { Campuses } from '/imports/api/campus/CampusCollection';
 import { check } from 'meteor/check';
 import { Meteor } from 'meteor/meteor';
 import { _ } from 'meteor/underscore';
@@ -19,14 +20,12 @@ class ProfileCollection extends BaseCollection {
   constructor() {
     super('Profile', new SimpleSchema({
       username: { type: String },
+      // Remainder are optional
       firstName: { type: String, optional: true },
       lastName: { type: String, optional: true },
       standing: { type: String, optional: true },
-      'standing.$': { type: String },
-      campus: { type: String, optional: true },
-      'campus.$': { type: String },
-      gender: { type: String, optional: true },
-      'gender.$': { type: String },
+      campuses: { type: Array, optional: true },
+      'campuses.$': { type: String },
       picture: { type: SimpleSchema.RegEx.Url, optional: true },
       bio: { type: String, optional: true },
     }, { tracker: Tracker }));
@@ -35,38 +34,44 @@ class ProfileCollection extends BaseCollection {
   /**
    * Defines a new Profile.
    * @example
-   * Profiles.define({ firstName: 'April',
-   *                   lastName: 'Bala',
-   *                   username: 'aaibala',
-   *                   standing: 'Student',
-   *                   campus: 'University of Hawaii at Manoa',
-   *                   gender: 'Female',
-   *                   picture: '',
-   *                   bio: 'I am a student at UH Manoa.',
+   * Profiles.define({ firstName: 'Philip',
+   *                   lastName: 'Johnson',
+   *                   username: 'johnson',
+   *                   bio: 'I have been a professor of computer science at UH since 1990.',
+   *                   interests: ['Application Development', 'Software Engineering', 'Databases'],
+   *                   title: 'Professor of Information and Computer Sciences',
+   *                   location: 'Honolulu, HI'
+   *                   picture: 'http://philipmjohnson.org/headshot.jpg',
+   *                   github: 'https://github.com/philipmjohnson',
+   *                   facebook: 'https://facebook.com/philipmjohnson',
+   *                   instagram: 'https://instagram.com/philipmjohnson' });
    * @param { Object } description Object with required key username.
    * Remaining keys are optional.
    * Username must be unique for all users. It should be the UH email account.
-   * @throws { Meteor.Error } If a user with the supplied username already exists.
+   * Interests is an array of defined interest names.
+   * @throws { Meteor.Error } If a user with the supplied username already exists, or
+   * if one or more interests are not defined, or if github, facebook, and instagram are not URLs.
    * @returns The newly created docID.
    */
-  define({ firstName = '', lastName = '', username, standing = '', campus = '', gender = '', picture = '', bio = '' }) {
+  define({ username, firstName = '', lastName = '', standing = '', campuses = [], picture = '', bio = '' }) {
     // make sure required fields are OK.
-    const checkPattern = {
-      firstName: String,
-      lastName: String,
-      username: String,
-      standing: String,
-      campus: String,
-      gender: String,
-      picture: String,
-      bio: String,
-    };
-    check({ firstName, lastName, username, standing, campus, gender, picture, bio }, checkPattern);
+    const checkPattern = { username: String, firstName: String, lastName: String, standing: String,
+      picture: String, bio: String };
+    check({ username, firstName, lastName, standing, picture, bio }, checkPattern);
 
     if (this.find({ username }).count() > 0) {
       throw new Meteor.Error(`${username} is previously defined in another Profile`);
     }
-    return this._collection.insert({ firstName, lastName, username, standing, campus, gender, picture, bio });
+
+    // Throw an error if any of the passed Interest names are not defined.
+    Campuses.assertNames(campuses);
+
+    // Throw an error if there are duplicates in the passed interest names.
+    if (campuses.length !== _.uniq(campuses).length) {
+      throw new Meteor.Error(`${campuses} contains duplicates`);
+    }
+
+    return this._collection.insert({ username, firstName, lastName, standing, campuses, picture, bio });
   }
 
   /**
@@ -76,16 +81,14 @@ class ProfileCollection extends BaseCollection {
    */
   dumpOne(docID) {
     const doc = this.findDoc(docID);
+    const username = doc.username;
     const firstName = doc.firstName;
     const lastName = doc.lastName;
-    const username = doc.username;
     const standing = doc.standing;
-    const campus = doc.campus;
-    const gender = doc.gender;
+    const campuses = doc.campuses;
     const picture = doc.picture;
     const bio = doc.bio;
-
-    return { firstName, lastName, username, standing, campus, gender, picture, bio };
+    return { username, firstName, lastName, standing, campuses, picture, bio };
   }
 }
 
@@ -93,4 +96,3 @@ class ProfileCollection extends BaseCollection {
  * Provides the singleton instance of this class to all other entities.
  */
 export const Profiles = new ProfileCollection();
-

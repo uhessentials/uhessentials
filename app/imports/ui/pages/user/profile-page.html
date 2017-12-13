@@ -3,75 +3,30 @@
   {{#if Template.subscriptionsReady}}
 
   <div class="ui text container segment">
-    <div class="ui dividing header">
-      Profile
+    <div class="ui centered dividing header">
+      <div class="ui huge header">Profile</div>
     </div>
-    <form class="ui equal width form profile-data-form {{ successClass }} {{ errorClass }}">
 
+    <form class="ui equal width form profile-data-form {{ successClass }} {{ errorClass }}">
       <div class="fields">
-        {{> Text_Form_Control label="First" placeholder="John" value=profile.firstName errorMessage=(fieldError
+        {{> Text_Form_Control label="First" placeholder="First Name" value=profile.firstName errorMessage=(fieldError
         "firstName")}}
-        {{> Text_Form_Control label="Last" placeholder="Smith" value=profile.lastName errorMessage=(fieldError
+        {{> Text_Form_Control label="Last" placeholder="Last Name" value=profile.lastName errorMessage=(fieldError
         "lastName")}}
       </div>
 
-      <div class="field" value=profile.gender>
-        <label>Gender</label>
-        <select class="ui dropdown" name="Gender">
-          <option value="">Select One...</option>
-          <option value="Female">Female</option>
-          <option value="Male">Male</option>
-          <option value="Other">Other</option>
-        </select>
-      </div>
-
-      <div class="field" value=profile.standing>
-        <label>Standing</label>
-        <select class="ui dropdown" name="Standing">
-          <option default value="">Select One...</option>
-          <option value="Student">Student</option>
-          <option value="Professor">Professor</option>
-          <option value="Faculty/Staff">Faculty/Staff</option>
-        </select>
-      </div>
-
-      <div class="field" value=profile.campus>
-        <label>Campus</label>
-        <select class="ui dropdown" name="Campus">
-          <option value="">Select One...</option>
-          <option value="Hawaiʻi Community College">Hawaiʻi Community College</option>
-          <option value="Honolulu Community College">Honolulu Community College</option>
-          <option value="Kapiʻolani Community College">Kapiʻolani Community College</option>
-          <option value="Kauaʻi Community College">Kauaʻi Community College</option>
-          <option value="Leeward Community College">Leeward Community College</option>
-          <option value="Windward Community College">Windward Community College</option>
-          <option value="University of Hawaiʻi, Hilo">University of Hawaiʻi, Hilo</option>
-          <option value="University of Hawaiʻi, Mānoa">University of Hawaiʻi, Mānoa</option>
-          <option value="University of Hawaiʻi Maui College">University of Hawaiʻi Maui College</option>
-          <option value="University of Hawaiʻi, West Oʻahu">University of Hawaiʻi, West Oʻahu</option>
-        </select>
-      </div>
-
       <div class="field">
-        <!-- {{> Text_Form_Control label="Standing" placeholder="Student/Teacher" value=profile.standing
-        errorMessage=(fieldError "standing")}} -->
-        <!-- {{> Text_Form_Control label="Campus" placeholder="University of Hawaii at Manoa" value=profile.campus
-        errorMessage=(fieldError "campus")}} -->
-        <!-- {{> Text_Form_Control label="Gender" placeholder="Male/Female/Other" value=profile.gender
-        errorMessage=(fieldError "gender")}} -->
+        {{> Text_Form_Control label="Standing" placeholder="Stundet/Professor/Staff" value=profile.standing
+        errorMessage=(fieldError "standing")}}
+
+        {{> Select_Form_Control label="Campus" options=campuses errorMessage=(fieldError "campuses") single=true }}
+
         {{> Text_Form_Control label="Picture" placeholder="http://foo.com/shot.jpg" value=profile.picture
         errorMessage=(fieldError "picture")}}
       </div>
 
-      {{> TextArea_Form_Control label="Bio" value=profile.bio placeholder="Short bio statement here"
+      {{> TextArea_Form_Control label="Bio" value=profile.bio placeholder="Short description about yourself"
       errorMessage=(fieldError "bio")}}
-
-      <div class="field">
-        <div class="ui checkbox">
-          <input type="checkbox" tabindex="0" class="hidden">
-          <label>I agree to the Terms and Conditions</label>
-        </div>
-      </div>
 
       <button class="ui primary button" type="submit">Submit</button>
       {{#if displaySuccessMessage}}
