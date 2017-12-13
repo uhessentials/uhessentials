@@ -23,10 +23,11 @@
 
         {{> Text_Form_Control label="Picture" placeholder="http://foo.com/shot.jpg" value=profile.picture
         errorMessage=(fieldError "picture")}}
-      </div>
 
       {{> TextArea_Form_Control label="Bio" value=profile.bio placeholder="Short description about yourself"
       errorMessage=(fieldError "bio")}}
+
+      </div>
 
       <button class="ui primary button" type="submit">Submit</button>
       {{#if displaySuccessMessage}}
