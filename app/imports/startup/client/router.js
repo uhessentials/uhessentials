@@ -149,6 +149,13 @@ userRoutes.route('/event/sports', {
 /*                        ROUTES FOR DEGREE THREAD TOPICS                     */
 
 /*                        ROUTES FOR FOOD THREAD TOPICS                     */
+export const foodtruckPageRouteName = 'FoodTruck_Thread';
+userRoutes.route('/food/foodtrucks', {
+  name: foodtruckPageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: foodtruckPageRouteName });
+  },
+});
 
 
 /*                        MISC ROUTES                       */
