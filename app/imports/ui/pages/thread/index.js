@@ -25,3 +25,6 @@ import './events-thread-bookstore.js';
 import './security-thread-office.css';
 import './security-thread-office.html';
 import './security-thread-office.js';
+import './security-thread-poles.css';
+import './security-thread-poles.html';
+import './security-thread-poles.js';

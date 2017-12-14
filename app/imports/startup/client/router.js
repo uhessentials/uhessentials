@@ -99,33 +99,6 @@ userRoutes.route('/events', {
   },
 });
 
-<<<<<<< HEAD
-export const concertPageRouteName = 'Concert_Thread';
-userRoutes.route('/concert', {
-  name: concertPageRouteName,
-  action() {
-    BlazeLayout.render('User_Layout', { main: concertPageRouteName });
-  },
-});
-
-export const sportsPageRouteName = 'Sports_Thread';
-userRoutes.route('/sports', {
-  name: sportsPageRouteName,
-  action() {
-    BlazeLayout.render('User_Layout', { main: sportsPageRouteName });
-  },
-});
-
-export const bookstorePageRouteName = 'Bookstore_Thread';
-userRoutes.route('/bookstore', {
-  name: bookstorePageRouteName,
-  action() {
-    BlazeLayout.render('User_Layout', { main: bookstorePageRouteName });
-  },
-});
-
-=======
->>>>>>> master
 export const foodPageRouteName = 'Food_Thread';
 userRoutes.route('/food', {
   name: foodPageRouteName,
@@ -139,14 +112,6 @@ userRoutes.route('/security', {
   name: securityPageRouteName,
   action() {
     BlazeLayout.render('User_Layout', { main: securityPageRouteName });
-  },
-});
-
-export const officePageRouteName = 'Office_Thread';
-userRoutes.route('/office', {
-  name: officePageRouteName,
-  action() {
-    BlazeLayout.render('User_Layout', { main: officePageRouteName });
   },
 });
 
@@ -176,8 +141,30 @@ userRoutes.route('/event/sports', {
   },
 });
 
-/*                        ROUTES FOR SECURITY THREAD TOPICS                     */
+export const bookstorePageRouteName = 'Bookstore_Thread';
+userRoutes.route('/bookstore', {
+  name: bookstorePageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: bookstorePageRouteName });
+  },
+});
 
+/*                        ROUTES FOR SECURITY THREAD TOPICS                     */
+export const officePageRouteName = 'Office_Thread';
+userRoutes.route('/office', {
+  name: officePageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: officePageRouteName });
+  },
+});
+
+export const polesPageRouteName = 'Poles_Thread';
+userRoutes.route('/poles', {
+  name: polesPageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: polesPageRouteName });
+  },
+});
 
 /*                        ROUTES FOR COMMUTE THREAD TOPICS                     */
 
