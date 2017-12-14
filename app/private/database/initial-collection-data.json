@@ -6,23 +6,23 @@
       "contents": [
         {
           "name": "Campus Events",
-          "description": ""
+          "description": "A thread about events going on around campus. This includes library and bookstore hours, campus events, gym hours, etc."
         },
         {
           "name": "Campus Security",
-          "description": ""
+          "description": "Questions about campus security?"
         },
         {
           "name": "Commuting",
-          "description": ""
+          "description": "A thread about commuting to and from campus. Need directions about how to get somewhere? Drop your questions here!"
         },
         {
           "name": "Degree Programs",
-          "description": ""
+          "description": "This thread contains questions regarding university degrees, majors, minors, classes, registration, etc."
         },
         {
           "name": "Food Services",
-          "description": ""
+          "description": "Anything and everything food related on campus!"
         }
       ]
     },
@@ -88,7 +88,7 @@
           "firstName": "Kyungim",
           "lastName": "Baek",
           "standing": "ICS Associate Professor",
-          "campus": "University of Hawaii, Manoa",
+          "campuses": "University of Hawaii, Manoa",
           "picture": "/images/baek.jpg",
           "bio": "I am an Associate Professor of Information and Computer Sciences at the University of Hawaii."
         },
@@ -97,7 +97,7 @@
           "firstName": "Edo",
           "lastName": "Biagioni",
           "standing": "ICS Associate Professor",
-          "campus": "University of Hawaii, Manoa",
+          "campuses": "University of Hawaii, Manoa",
           "picture": "/images/biagioni.jpg",
           "bio": "I am an Associate Professor of Information and Computer Sciences at the University of Hawaii."
         },
@@ -106,7 +106,7 @@
           "firstName": "Kim",
           "lastName": "Binsted",
           "standing": "ICS Associate Professor",
-          "campus": "University of Hawaii, Manoa",
+          "campuses": "University of Hawaii, Manoa",
           "picture": "/images/binsted.jpg",
           "bio": "I am an Associate Professor of Information and Computer Sciences at the University of Hawaii."
         },
@@ -115,7 +115,7 @@
           "firstName": "Henri",
           "lastName": "Casanova",
           "standing": "ICS Professor",
-          "campus": "University of Hawaii, Manoa",
+          "campuses": "University of Hawaii, Manoa",
           "picture": "/images/casanova.jpg",
           "bio": "I am a Professor of Information and Computer Sciences at the University of Hawaii."
         },
@@ -124,7 +124,7 @@
           "firstName": "Lee",
           "lastName": "Altenberg",
           "standing": "ICS Associate Professor",
-          "campus": "University of Hawaii, Manoa",
+          "campuses": "University of Hawaii, Manoa",
           "picture": "/images/altenberg.jpg",
           "bio": "I am an Associate Professor of Information and Computer Sciences at the University of Hawaii."
         }

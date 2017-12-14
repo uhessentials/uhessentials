@@ -1,0 +1,104 @@
+<template name="WinterHours_Thread">
+
+  <div class="ui container" style="margin: 20px">
+
+    <div class="ui centered dividing header">
+      <div class="ui huge header">Is Paradise Palms open during winter break?</div>
+      <div class="topic-2">
+        <div class="item">
+          <div class="ui divided items">
+
+            <div class="item">
+              <div class="content">
+                <div class="item">
+
+                  <div class="meta">
+                    <span class="poster">Posted by: Janice Lewis</span>
+                    <span class="posted">1 day ago</span>
+                  </div>
+                  <div class="meta">
+            <span class="votes">
+              <i class="green checkmark icon"></i>
+                Votes: 20
+            </span>
+                  </div>
+
+                  <div class="rating">
+                    <div class="extra">
+                      <div class="ui buttons">
+                        <button class="ui positive large button">Like</button>
+                        <div class="or"></div>
+                        <button class="ui negative large button">Dislike</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="topic">
+      <div class="item">
+        <div class="ui divided items">
+
+          <div class="item">
+            <div class="content">
+              <div class="item">
+
+                <div class="extra">
+                  <div class = "comments">
+                    <div class="ui comments">
+                      <div class="comment">
+                        <a class="avatar">
+                          <img
+                              src="https://github.com/uhessentials/uhessentials/blob/master/app/public/images/placeholder.png?raw=true">
+                        </a>
+                        <div class="content">
+                          <a class="author">Jessie Ringer</a>
+                          <div class="metadata">
+                            <div class="date">3 hours ago</div>
+                          </div>
+                          <div class="text">
+                            <p>I don't think so, sorry.</p>
+                          </div>
+                          <div class="actions">
+                            <a class="reply">Reply</a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <form class="ui reply form">
+                        <div class="field">
+                          <textarea></textarea>
+                        </div>
+                        <div class="ui primary submit labeled large icon button">
+                          <i class="icon edit"></i> Add Comment
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="submit-button">
+      <div class="item">
+        <a class="{{isActiveRoute "Submit_Page"}} item" href="{{pathFor "Submit_Page" username=routeUserName}}">
+        <button class="huge fluid ui green button">Submit New Topic</button>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+</template>

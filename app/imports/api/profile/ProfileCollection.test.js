@@ -14,7 +14,7 @@ if (Meteor.isServer) {
     const username = 'johnson';
     const firstName = 'Philip';
     const lastName = 'Johnson';
-    const standing = 'ICS Professor'
+    const standing = 'ICS Professor';
     const campuses = [campusName];
     const picture = 'http://philipmjohnson.org/headshot.jpg';
     const bio = 'I have been a professor of computer science at UH since 1990.';

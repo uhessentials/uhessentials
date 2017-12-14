@@ -171,7 +171,85 @@ userRoutes.route('/poles', {
 /*                        ROUTES FOR DEGREE THREAD TOPICS                     */
 
 /*                        ROUTES FOR FOOD THREAD TOPICS                     */
+export const foodtruckPageRouteName = 'FoodTruck_Thread';
+userRoutes.route('/food/foodtrucks', {
+  name: foodtruckPageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: foodtruckPageRouteName });
+  },
+});
 
+export const afterhoursfoodPageRouteName = 'AfterHoursFood_Thread';
+userRoutes.route('/food/afterhoursfood', {
+  name: afterhoursfoodPageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: afterhoursfoodPageRouteName });
+  },
+});
+
+export const winterhourfoodPageRouteName = 'WinterHours_Thread';
+userRoutes.route('/food/winterhoursfood', {
+  name: winterhourfoodPageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: winterhourfoodPageRouteName });
+  },
+});
+
+export const mealplanPageRouteName = 'MealPlan_Thread';
+userRoutes.route('/food/mealplan', {
+  name: mealplanPageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: mealplanPageRouteName });
+  },
+});
+
+export const cchoursPageRouteName = 'CCHours_Thread';
+userRoutes.route('/food/cchours', {
+  name: cchoursPageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: cchoursPageRouteName });
+  },
+});
+
+export const vendmachPageRouteName = 'VendingMachine_Thread';
+userRoutes.route('/food/vendingmachine', {
+  name: vendmachPageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: vendmachPageRouteName });
+  },
+});
+
+export const needcoffeePageRouteName = 'NeedCoffee_Thread';
+userRoutes.route('/food/needcoffee', {
+  name: needcoffeePageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: needcoffeePageRouteName });
+  },
+});
+
+export const vegetarianPageRouteName = 'Vegetarian_Thread';
+userRoutes.route('/food/vegetarian', {
+  name: vegetarianPageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: vegetarianPageRouteName });
+  },
+});
+
+export const offcampusfoodPageRouteName = 'OffCampusFood_Thread';
+userRoutes.route('/food/offcampusfood', {
+  name: offcampusfoodPageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: offcampusfoodPageRouteName });
+  },
+});
+
+export const dessertPageRouteName = 'Dessert_Thread';
+userRoutes.route('/food/dessert', {
+  name: dessertPageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: dessertPageRouteName });
+  },
+});
 
 /*                        MISC ROUTES                       */
 FlowRouter.notFound = {
