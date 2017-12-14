@@ -189,6 +189,30 @@ userRoutes.route('/food/cchours', {
   },
 });
 
+export const vendmachPageRouteName = 'VendingMachine_Thread';
+userRoutes.route('/food/vendingmachine', {
+  name: vendmachPageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: vendmachPageRouteName });
+  },
+});
+
+export const needcoffeePageRouteName = 'NeedCoffee_Thread';
+userRoutes.route('/food/needcoffee', {
+  name: needcoffeePageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: needcoffeePageRouteName });
+  },
+});
+
+export const vegetarianPageRouteName = 'Vegetarian_Thread';
+userRoutes.route('/food/vegetarian', {
+  name: vegetarianPageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: vegetarianPageRouteName });
+  },
+});
+
 /*                        MISC ROUTES                       */
 FlowRouter.notFound = {
   action() {

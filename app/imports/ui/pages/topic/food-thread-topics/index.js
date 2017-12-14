@@ -12,3 +12,13 @@ import './mealplan-topic.js';
 
 import './cchours-topic.html';
 import './cchours-topic.js';
+
+import './vendingmachine-topic.html';
+import './vendingmachine-topic.js';
+
+import './needcoffee-topic.html';
+import './needcoffee-topic.js';
+
+import './vegetarian-topic.html';
+import './vegetarian-topic.js';
+
