@@ -39,7 +39,6 @@
           </div>
         </div>
       </div>
-
     </div>
 
     <div class="topic">
@@ -51,66 +50,25 @@
               <div class="item">
 
                 <div class="extra">
-                  <div class = "comments">
-                    <div class="ui comments">
-                      <div class="comment">
-                        <a class="avatar">
-                          <img
-                              src="https://github.com/uhessentials/uhessentials/blob/master/app/public/images/placeholder.png?raw=true">
-                        </a>
-                        <div class="content">
-                          <a class="author">Joe Henderson</a>
-                          <div class="metadata">
-                            <div class="date">3 hours ago</div>
-                          </div>
-                          <div class="text">
-                            <p> No clue man...  ¯\_(ツ)_/¯ </p>
-                          </div>
-                          <div class="actions">
-                            <a class="reply">Reply</a>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="comment">
-                        <a class="avatar">
-                          <img
-                              src="https://github.com/uhessentials/uhessentials/blob/master/app/public/images/placeholder.png?raw=true">
-                        </a>
-                        <div class="content">
-                          <a class="author">Christian Rocha</a>
-                          <div class="metadata">
-                            <div class="date">30 min ago</div>
-                          </div>
-                          <div class="text">
-                            Try check the information office at campus center; it's like right by Subway. I usually go there for movie tickets, but I'm pretty sure they sell concert tickets too...
-                          </div>
-                          <div class="actions">
-                            <a class="reply">Reply</a>
-                          </div>
-                        </div>
-                      </div>
-                      <form class="ui reply form">
-                        <div class="field">
-                          <textarea></textarea>
-                        </div>
-                        <div class="ui primary submit labeled large icon button">
-                          <i class="icon edit"></i> Add Comment
-                        </div>
-                      </form>
+                  <form class="ui reply form">
+                    <div class="field">
+                      <textarea></textarea>
                     </div>
-                  </div>
+                    <div class="ui primary submit labeled large icon button">
+                      <i class="icon edit"></i> Add Comment
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </div>
 
     <div class="submit-button">
       <div class="item">
-        <a class="{{isActiveRoute "Submit_Page"}} item" href="{{pathFor "Submit_Page" username=routeUserName}}">
+        <a class="{{isActiveRoute " Submit_Page"}} item" href="{{pathFor "Submit_Page" username=routeUserName}}">
         <button class="huge fluid ui green button">Submit New Topic</button>
         </a>
       </div>

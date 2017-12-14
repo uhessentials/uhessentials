@@ -213,6 +213,22 @@ userRoutes.route('/food/vegetarian', {
   },
 });
 
+export const offcampusfoodPageRouteName = 'OffCampusFood_Thread';
+userRoutes.route('/food/offcampusfood', {
+  name: offcampusfoodPageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: offcampusfoodPageRouteName });
+  },
+});
+
+export const dessertPageRouteName = 'Dessert_Thread';
+userRoutes.route('/food/dessert', {
+  name: dessertPageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: dessertPageRouteName });
+  },
+});
+
 /*                        MISC ROUTES                       */
 FlowRouter.notFound = {
   action() {

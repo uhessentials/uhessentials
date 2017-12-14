@@ -50,50 +50,25 @@
             <div class="content">
               <div class="item">
 
-                <div class="extra">
-                  <div class = "comments">
-                    <div class="ui comments">
-                      <div class="comment">
-                        <a class="avatar">
-                          <img
-                              src="https://github.com/uhessentials/uhessentials/blob/master/app/public/images/placeholder.png?raw=true">
-                        </a>
-                        <div class="content">
-                          <a class="author">Jane Matthews</a>
-                          <div class="metadata">
-                            <div class="date">12 hours ago</div>
-                          </div>
-                          <div class="text">
-                            <p>I think Bale might be open till 8pm</p>
-                          </div>
-                          <div class="actions">
-                            <a class="reply">Reply</a>
-                          </div>
-                        </div>
-                      </div>
-                      
-                      <form class="ui reply form">
-                        <div class="field">
-                          <textarea></textarea>
-                        </div>
-                        <div class="ui primary submit labeled large icon button">
-                          <i class="icon edit"></i> Add Comment
-                        </div>
-                      </form>
-                    </div>
+
+                <form class="ui reply form">
+                  <div class="field">
+                    <textarea></textarea>
                   </div>
-                </div>
+                  <div class="ui primary submit labeled large icon button">
+                    <i class="icon edit"></i> Add Comment
+                  </div>
+                </form>
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </div>
 
     <div class="submit-button">
       <div class="item">
-        <a class="{{isActiveRoute "Submit_Page"}} item" href="{{pathFor "Submit_Page" username=routeUserName}}">
+        <a class="{{isActiveRoute " Submit_Page"}} item" href="{{pathFor "Submit_Page" username=routeUserName}}">
         <button class="huge fluid ui green button">Submit New Topic</button>
         </a>
       </div>

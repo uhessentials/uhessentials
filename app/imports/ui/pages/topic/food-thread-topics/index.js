@@ -22,3 +22,8 @@ import './needcoffee-topic.js';
 import './vegetarian-topic.html';
 import './vegetarian-topic.js';
 
+import './offcampusfood-topic.html';
+import './offcampusfood-topic.js';
+
+import './dessert-topic.html';
+import './dessert-topic.js';
