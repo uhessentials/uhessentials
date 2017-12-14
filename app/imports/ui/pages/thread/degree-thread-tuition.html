@@ -1,0 +1,121 @@
+<template name="Tuition_Thread">
+
+  <div class="ui container" style="margin: 20px">
+
+    <div class="ui centered dividing header">
+      <div class="ui huge header">When's tuition due for the spring 2018 semester?</div>
+      <div class="topic-2">
+        <div class="item">
+          <div class="ui divided items">
+
+            <div class="item">
+              <div class="content">
+                <div class="item">
+
+                  <div class="meta">
+                    <span class="poster">Posted by: Brandon Bell</span>
+                    <span class="posted">12 min ago</span>
+                  </div>
+                  <div class="meta">
+            <span class="votes">
+              <i class="green checkmark icon"></i>
+                Votes: 149
+            </span>
+                  </div>
+
+                  <div class="rating">
+                    <div class="extra">
+                      <div class="ui buttons">
+                        <button class="ui positive large button">Like</button>
+                        <div class="or"></div>
+                        <button class="ui negative large button">Dislike</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="topic">
+      <div class="item">
+        <div class="ui divided items">
+
+          <div class="item">
+            <div class="content">
+              <div class="item">
+
+                <div class="extra">
+                  <div class = "comments">
+                  <div class="ui comments">
+                    <div class="comment">
+                      <a class="avatar">
+                        <img
+                            src="https://github.com/uhessentials/uhessentials/blob/master/app/public/images/placeholder.png?raw=true">
+                      </a>
+                      <div class="content">
+                        <a class="author">Emma Kennedy</a>
+                        <div class="metadata">
+                          <div class="date">1 min ago</div>
+                        </div>
+                        <div class="text">
+                         It was due last week Friday...
+                        </div>
+                        <div class="actions">
+                          <a class="reply">Reply</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="comment">
+                      <a class="avatar">
+                        <img
+                            src="https://github.com/uhessentials/uhessentials/blob/master/app/public/images/placeholder.png?raw=true">
+                      </a>
+                      <div class="content">
+                        <a class="author">Chris Shuler</a>
+                        <div class="metadata">
+                          <div class="date">10 min ago</div>
+                        </div>
+                        <div class="text">
+                          If you got scholarships or financial aid then I think it's due in January, but if you didn't... well you might need to talk to whoever handles payment stuff....
+                        </div>
+                        <div class="actions">
+                          <a class="reply">Reply</a>
+                        </div>
+                      </div>
+                    </div>
+                    <form class="ui reply form">
+                      <div class="field">
+                        <textarea></textarea>
+                      </div>
+                      <div class="ui primary submit labeled large icon button">
+                        <i class="icon edit"></i> Add Comment
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="submit-button">
+      <div class="item">
+        <a class="{{isActiveRoute "Submit_Page"}} item" href="{{pathFor "Submit_Page" username=routeUserName}}">
+        <button class="huge fluid ui green button">Submit New Topic</button>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+</template>

@@ -166,9 +166,63 @@ userRoutes.route('/poles', {
   },
 });
 
-/*                        ROUTES FOR COMMUTE THREAD TOPICS                     */
 
+export const appPageRouteName = 'App_Thread';
+userRoutes.route('/app', {
+  name: appPageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: appPageRouteName });
+  },
+});
+
+/*                        ROUTES FOR COMMUTE THREAD TOPICS                     */
+export const aieaPageRouteName = 'Aiea_Thread';
+userRoutes.route('/aiea', {
+  name: aieaPageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: aieaPageRouteName });
+  },
+});
+
+export const upassPageRouteName = 'Upass_Thread';
+userRoutes.route('/upass', {
+  name: upassPageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: upassPageRouteName });
+  },
+});
+
+export const shuttlePageRouteName = 'Shuttle_Thread';
+userRoutes.route('/shuttle', {
+  name: shuttlePageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: shuttlePageRouteName });
+  },
+});
 /*                        ROUTES FOR DEGREE THREAD TOPICS                     */
+export const tuitionPageRouteName = 'Tuition_Thread';
+userRoutes.route('/tuition', {
+  name: tuitionPageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: tuitionPageRouteName });
+  },
+});
+
+export const summerPageRouteName = 'Summer_Thread';
+userRoutes.route('/summer', {
+  name: summerPageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: summerPageRouteName });
+  },
+});
+
+export const minorPageRouteName = 'Minor_Thread';
+userRoutes.route('/minor', {
+  name: minorPageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: minorPageRouteName });
+  },
+});
 
 /*                        ROUTES FOR FOOD THREAD TOPICS                     */
 export const foodtruckPageRouteName = 'FoodTruck_Thread';

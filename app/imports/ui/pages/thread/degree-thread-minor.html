@@ -1,0 +1,103 @@
+<template name="Minor_Thread">
+
+  <div class="ui container" style="margin: 20px">
+
+    <div class="ui centered dividing header">
+      <div class="ui huge header">Considering a minor, but not sure what I should do...</div>
+      <div class="topic-2">
+        <div class="item">
+          <div class="ui divided items">
+
+            <div class="item">
+              <div class="content">
+                <div class="item">
+
+                  <div class="meta">
+                    <span class="poster">Posted by: Catherin Harris</span>
+                    <span class="posted">1 hour ago</span>
+                  </div>
+                  <div class="meta">
+            <span class="votes">
+              <i class="green checkmark icon"></i>
+                Votes: 33
+            </span>
+                  </div>
+
+                  <div class="rating">
+                    <div class="extra">
+                      <div class="ui buttons">
+                        <button class="ui positive large button">Like</button>
+                        <div class="or"></div>
+                        <button class="ui negative large button">Dislike</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="topic">
+      <div class="item">
+        <div class="ui divided items">
+
+          <div class="item">
+            <div class="content">
+              <div class="item">
+
+                <div class="extra">
+                  <div class = "comments">
+                  <div class="ui comments">
+                    <div class="comment">
+                      <a class="avatar">
+                        <img
+                            src="https://github.com/uhessentials/uhessentials/blob/master/app/public/images/placeholder.png?raw=true">
+                      </a>
+                      <div class="content">
+                        <a class="author">Annie Mae Shun</a>
+                        <div class="metadata">
+                          <div class="date">4 min ago</div>
+                        </div>
+                        <div class="text">
+                         I think you have to give us a little more info on yourself... like your major, what you're interested in, etc...
+                        </div>
+                        <div class="actions">
+                          <a class="reply">Reply</a>
+                        </div>
+                      </div>
+                    </div>
+                    <form class="ui reply form">
+                      <div class="field">
+                        <textarea></textarea>
+                      </div>
+                      <div class="ui primary submit labeled large icon button">
+                        <i class="icon edit"></i> Add Comment
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="submit-button">
+      <div class="item">
+        <a class="{{isActiveRoute "Submit_Page"}} item" href="{{pathFor "Submit_Page" username=routeUserName}}">
+        <button class="huge fluid ui green button">Submit New Topic</button>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+</template>
