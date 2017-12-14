@@ -8,14 +8,14 @@
     </div>
 
     <form class="ui equal width form profile-data-form {{ successClass }} {{ errorClass }}">
-      <div class="fields" style = "font-size: 20px">
+      <div class="fields">
         {{> Text_Form_Control label="First" placeholder="First Name" value=profile.firstName errorMessage=(fieldError
         "firstName")}}
         {{> Text_Form_Control label="Last" placeholder="Last Name" value=profile.lastName errorMessage=(fieldError
         "lastName")}}
       </div>
 
-      <div class="field"  style = "font-size: 20px">
+      <div class="field">
         {{> Text_Form_Control label="Standing" placeholder="Stundet/Professor/Staff" value=profile.standing
         errorMessage=(fieldError "standing")}}
 
