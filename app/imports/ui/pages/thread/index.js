@@ -19,4 +19,9 @@ import './events-thread-concert.js';
 import './events-thread-sports.css';
 import './events-thread-sports.html';
 import './events-thread-sports.js';
-
+import './events-thread-bookstore.css';
+import './events-thread-bookstore.html';
+import './events-thread-bookstore.js';
+import './security-thread-office.css';
+import './security-thread-office.html';
+import './security-thread-office.js';

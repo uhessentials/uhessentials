@@ -115,6 +115,14 @@ userRoutes.route('/sports', {
   },
 });
 
+export const bookstorePageRouteName = 'Bookstore_Thread';
+userRoutes.route('/bookstore', {
+  name: bookstorePageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: bookstorePageRouteName });
+  },
+});
+
 export const foodPageRouteName = 'Food_Thread';
 userRoutes.route('/food', {
   name: foodPageRouteName,
@@ -128,6 +136,14 @@ userRoutes.route('/security', {
   name: securityPageRouteName,
   action() {
     BlazeLayout.render('User_Layout', { main: securityPageRouteName });
+  },
+});
+
+export const officePageRouteName = 'Office_Thread';
+userRoutes.route('/office', {
+  name: officePageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: officePageRouteName });
   },
 });
 
